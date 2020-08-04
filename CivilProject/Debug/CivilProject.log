@@ -1,0 +1,8 @@
+﻿  IBaseObject.cpp
+  CivilProject.cpp
+  DataProvider.cpp
+  Exceptions.cpp
+  IWDraw.cpp
+  Point2d.cpp
+  Generating Code...
+  CivilProject.vcxproj -> C:\git\CivilProject\Debug\CivilProject.exe

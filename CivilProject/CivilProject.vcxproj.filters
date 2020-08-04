@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Base">
+      <UniqueIdentifier>{22c24162-ff2d-4d31-a7bc-3fe5183e0ede}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Figure">
+      <UniqueIdentifier>{3722b077-2dd4-447c-be00-6023e63733a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Figure\FigureFabric">
+      <UniqueIdentifier>{00d2359a-45c1-41e9-9e9f-e80dda79c49a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\InOtFile">
+      <UniqueIdentifier>{f1c6e3f3-0611-417a-864f-0d489f4447c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Base">
+      <UniqueIdentifier>{27af5290-8819-47a7-80d8-791b181e5510}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Figure">
+      <UniqueIdentifier>{1617261d-c822-4194-a93b-ac02a792ee5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Figure\FigureFabric">
+      <UniqueIdentifier>{6f9d6584-8e74-49db-88b3-53a0bc45c782}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\InOtFile">
+      <UniqueIdentifier>{c518dda6-6ab7-4000-b285-9c9c807236c7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CivilProject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DataProvider.cpp">
+      <Filter>Source Files\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Exceptions.cpp">
+      <Filter>Source Files\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="IWDraw.cpp">
+      <Filter>Source Files\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Point2d.cpp">
+      <Filter>Source Files\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="IBaseObject.cpp">
+      <Filter>Source Files\Base</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Point2d.h">
+      <Filter>Header Files\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="DataProvider.h">
+      <Filter>Header Files\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Exceptions.h">
+      <Filter>Header Files\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Full_libs.h">
+      <Filter>Header Files\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="IWDraw.h">
+      <Filter>Header Files\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="IBaseObject.h">
+      <Filter>Header Files\Base</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
