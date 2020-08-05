@@ -11,7 +11,6 @@ class IBaseObject
 {
 public:
 	IBaseObject();
-	IBaseObject(std::string name);
 	virtual ~IBaseObject();
 	IBaseObject(const IBaseObject& obj);
 	IBaseObject& operator=(const IBaseObject& rhs);
@@ -28,7 +27,7 @@ public:
 
 protected:
 	void setName(std::string);
-  std::shared_ptr<BaseImpl> imple;
+  std::shared_ptr<BaseImpl> impl;
 private:
 
 };

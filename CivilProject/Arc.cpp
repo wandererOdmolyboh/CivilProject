@@ -1,41 +1,37 @@
 #include "Arc.h"
-#include "Arc_circle.h"
+#include "ArcImpl.h"
 
-Arc_circle::Arc_circle()
+Arc::Arc(): IBaseObject(new ArcImpl, name)
 {
 }
 
-Arc_circle::Arc_circle(std::string name)
+Arc::~Arc()
 {
 }
 
-Arc_circle::~Arc_circle()
+Arc::Arc(const Arc & obj)
 {
 }
 
-Arc_circle::Arc_circle(const Arc_circle & obj)
-{
-}
-
-Arc_circle & Arc_circle::operator=(const Arc_circle & rhs)
+Arc & Arc::operator=(const Arc & rhs)
 {
   // TODO: insert return statement here
 }
 
-Rect * Arc_circle::boundingBox()
+Rect * Arc::boundingBox()
 {
   return nullptr;
 }
 
-void Arc_circle::DrawObject() const
+void Arc::DrawObject() const
 {
 }
 
-bool Arc_circle::isValid() const
+bool Arc::isValid() const
 {
   return false;
 }
 
-void Arc_circle::set(std::vector<double>& tmp)
+void Arc::set(std::vector<double>& tmp)
 {
 }
