@@ -15,6 +15,16 @@ Point2d::~Point2d(void)
 {
 }
 
+double Point2d::x() const
+{
+  return m_dX;
+}
+
+double Point2d::y() const
+{
+  return m_dY;
+}
+
 
 void Point2d::set(double xx, double yy)
 {

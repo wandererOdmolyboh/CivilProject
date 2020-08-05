@@ -11,6 +11,7 @@ namespace UnitTest
 		
 		TEST_METHOD(TestMethod1)
 		{
+      Assert::AreEqual(1, 1);
 		}
 	};
   TEST_CLASS(UCopyConstruct)
@@ -19,6 +20,7 @@ namespace UnitTest
 
     TEST_METHOD(TestMethod1)
     {
+      Assert::AreEqual(1, 1);
     }
   };
   TEST_CLASS(USetTest)
@@ -27,6 +29,7 @@ namespace UnitTest
 
     TEST_METHOD(TestMethod1)
     {
+      Assert::AreEqual(1, 1);
     }
   };
   TEST_CLASS(UDrawTest)
@@ -35,14 +38,7 @@ namespace UnitTest
 
     TEST_METHOD(TestMethod1)
     {
-    }
-  };
-  TEST_CLASS(USetTest)
-  {
-  public:
-
-    TEST_METHOD(TestMethod1)
-    {
+      Assert::AreEqual(1, 1);
     }
   };
 }

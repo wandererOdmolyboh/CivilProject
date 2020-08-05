@@ -1,6 +1,5 @@
 ﻿  IBaseObject.cpp
   CivilProject.cpp
-  DataProvider.cpp
   Exceptions.cpp
   IWDraw.cpp
   Point2d.cpp

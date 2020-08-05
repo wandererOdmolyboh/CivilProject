@@ -13,7 +13,7 @@ public:
 	IBaseObject& operator=(const IBaseObject& rhs);
 
 public:
-	virtual Rect* boundingBox() = 0; // insert to another interface
+	virtual Rect* boundingBox() = 0; 
   virtual void DrawObject() const = 0;
   virtual bool isValid() const = 0;
 	//
