@@ -78,6 +78,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>E:\boost_1_73_0;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\boost_1_73_0\libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -120,6 +122,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>E:\boost_1_73_0\boost;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -139,18 +142,28 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Arc.cpp" />
+    <ClCompile Include="ArcImpl.cpp" />
+    <ClCompile Include="BaseImpl.cpp" />
     <ClCompile Include="IBaseObject.cpp" />
     <ClCompile Include="CivilProject.cpp" />
     <ClCompile Include="Exceptions.cpp" />
     <ClCompile Include="IWDraw.cpp" />
     <ClCompile Include="Point2d.cpp" />
+    <ClCompile Include="WDrawCons.cpp" />
+    <ClCompile Include="WDrawOGL.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ArcImpl.h" />
+    <ClInclude Include="Arc.h" />
+    <ClInclude Include="BaseImpl.h" />
     <ClInclude Include="IBaseObject.h" />
     <ClInclude Include="Exceptions.h" />
     <ClInclude Include="Full_libs.h" />
     <ClInclude Include="IWDraw.h" />
     <ClInclude Include="Point2d.h" />
+    <ClInclude Include="WDrawCons.h" />
+    <ClInclude Include="WDrawOGL.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

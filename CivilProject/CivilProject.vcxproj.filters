@@ -19,9 +19,6 @@
     <Filter Include="Header Files\Figure">
       <UniqueIdentifier>{3722b077-2dd4-447c-be00-6023e63733a6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Figure\FigureFabric">
-      <UniqueIdentifier>{00d2359a-45c1-41e9-9e9f-e80dda79c49a}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\InOtFile">
       <UniqueIdentifier>{f1c6e3f3-0611-417a-864f-0d489f4447c2}</UniqueIdentifier>
     </Filter>
@@ -31,11 +28,26 @@
     <Filter Include="Source Files\Figure">
       <UniqueIdentifier>{1617261d-c822-4194-a93b-ac02a792ee5d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Figure\FigureFabric">
-      <UniqueIdentifier>{6f9d6584-8e74-49db-88b3-53a0bc45c782}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\InOtFile">
       <UniqueIdentifier>{c518dda6-6ab7-4000-b285-9c9c807236c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Draw">
+      <UniqueIdentifier>{aa336639-dbcf-406f-aa7f-329debb9a8b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Draw">
+      <UniqueIdentifier>{81284421-01e9-4c68-a5aa-44cdc0060b01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\FigureFabric">
+      <UniqueIdentifier>{6f9d6584-8e74-49db-88b3-53a0bc45c782}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\FigureFabric">
+      <UniqueIdentifier>{00d2359a-45c1-41e9-9e9f-e80dda79c49a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Impl">
+      <UniqueIdentifier>{dff7ff2d-7a0b-4703-a8f2-5f5286282a6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ImplEntity">
+      <UniqueIdentifier>{62f72853-5ebe-4e7d-a022-617f421bc7aa}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -51,8 +63,23 @@
     <ClCompile Include="Point2d.cpp">
       <Filter>Source Files\Base</Filter>
     </ClCompile>
+    <ClCompile Include="WDrawOGL.cpp">
+      <Filter>Source Files\Draw</Filter>
+    </ClCompile>
+    <ClCompile Include="WDrawCons.cpp">
+      <Filter>Source Files\Draw</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseImpl.cpp">
+      <Filter>Source Files\ImplEntity</Filter>
+    </ClCompile>
+    <ClCompile Include="Arc.cpp">
+      <Filter>Source Files\Figure</Filter>
+    </ClCompile>
+    <ClCompile Include="ArcImpl.cpp">
+      <Filter>Source Files\ImplEntity</Filter>
+    </ClCompile>
     <ClCompile Include="IBaseObject.cpp">
-      <Filter>Source Files\Base</Filter>
+      <Filter>Source Files\Figure</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -68,8 +95,23 @@
     <ClInclude Include="IWDraw.h">
       <Filter>Header Files\Base</Filter>
     </ClInclude>
+    <ClInclude Include="WDrawCons.h">
+      <Filter>Header Files\Draw</Filter>
+    </ClInclude>
+    <ClInclude Include="WDrawOGL.h">
+      <Filter>Header Files\Draw</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseImpl.h">
+      <Filter>Header Files\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="ArcImpl.h">
+      <Filter>Header Files\Impl</Filter>
+    </ClInclude>
     <ClInclude Include="IBaseObject.h">
-      <Filter>Header Files\Base</Filter>
+      <Filter>Header Files\Figure</Filter>
+    </ClInclude>
+    <ClInclude Include="Arc.h">
+      <Filter>Header Files\Figure</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
