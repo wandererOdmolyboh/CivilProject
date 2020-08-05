@@ -1,9 +1,9 @@
 #include "operation_w_double.h"
-#define EXP 0.0002
+
 bool CompareDoubleMore(double a, double b)
 {
   double rez = abs(a - b);
-  if (rez > EXP)
+  if (rez > ErororComapre::Exp)
     return true;
   return false;
 }
@@ -11,7 +11,7 @@ bool CompareDoubleMore(double a, double b)
 bool CompareDoubleLess(double a, double b)
 {
   double rez = abs(a - b);
-  if (rez < EXP)
+  if (rez < ErororComapre::Exp)
     return true;
   return false;
 }
@@ -19,7 +19,7 @@ bool CompareDoubleLess(double a, double b)
 bool CompareDoubleEquall(double a, double b)
 {
   double rez = abs(a - b);
-  if (rez == EXP)////????????? < && >
+  if (rez == ErororComapre::Exp)////????????? < && >
     return true;
   return false;
 }

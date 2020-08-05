@@ -1,6 +1,2 @@
-﻿  Arc.cpp
-  ArcImpl.cpp
-  BaseImpl.cpp
-  IBaseObject.cpp
-  Generating Code...
+﻿  ArcImpl.cpp
   CivilProject.vcxproj -> C:\git\CivilProject\x64\Debug\CivilProject.exe

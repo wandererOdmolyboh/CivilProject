@@ -149,6 +149,7 @@
     <ClCompile Include="CivilProject.cpp" />
     <ClCompile Include="Exceptions.cpp" />
     <ClCompile Include="IWDraw.cpp" />
+    <ClCompile Include="operation_w_double.cpp" />
     <ClCompile Include="Point2d.cpp" />
     <ClCompile Include="WDrawCons.cpp" />
     <ClCompile Include="WDrawOGL.cpp" />
@@ -157,10 +158,12 @@
     <ClInclude Include="ArcImpl.h" />
     <ClInclude Include="Arc.h" />
     <ClInclude Include="BaseImpl.h" />
+    <ClInclude Include="Constant_Oda.h" />
     <ClInclude Include="IBaseObject.h" />
     <ClInclude Include="Exceptions.h" />
     <ClInclude Include="Full_libs.h" />
     <ClInclude Include="IWDraw.h" />
+    <ClInclude Include="operation_w_double.h" />
     <ClInclude Include="Point2d.h" />
     <ClInclude Include="WDrawCons.h" />
     <ClInclude Include="WDrawOGL.h" />
