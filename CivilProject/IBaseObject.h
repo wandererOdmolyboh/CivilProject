@@ -1,6 +1,10 @@
 #pragma once
 #include <string>
 #include <vector>
+#include "BaseImpl.h"
+#include <memory>
+#include <boost/pointer_cast.hpp>
+#include <boost/shared_ptr.hpp>
 
 class Rect;
 class IBaseObject
@@ -24,9 +28,8 @@ public:
 
 protected:
 	void setName(std::string);
-
-protected:
-	std::string name;
+  std::shared_ptr<BaseImpl> imple;
 private:
+
 };
 
