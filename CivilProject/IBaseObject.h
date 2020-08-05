@@ -5,19 +5,20 @@
 #include <memory>
 #include <boost/pointer_cast.hpp>
 #include <boost/shared_ptr.hpp>
-
+#include "IWDraw.h"
 class Rect;
 class IBaseObject
 {
 public:
 	IBaseObject();
+  IBaseObject(std::shared_ptr<BaseImpl> impl);
 	virtual ~IBaseObject();
 	IBaseObject(const IBaseObject& obj);
 	IBaseObject& operator=(const IBaseObject& rhs);
 
 public:
 	virtual Rect* boundingBox() = 0; 
-  virtual void DrawObject() const = 0;
+  virtual void DrawObject(IWDraw *w) const = 0;
   virtual bool isValid() const = 0;
 	//
 	//virtual void save(IWriter*&) = 0;
@@ -27,7 +28,7 @@ public:
 
 protected:
 	void setName(std::string);
-  std::shared_ptr<BaseImpl> impl;
+  std::shared_ptr<BaseImpl> d_pImpl;
 private:
 
 };

@@ -1,7 +1,7 @@
 #include "Arc.h"
 #include "ArcImpl.h"
 
-Arc::Arc(): IBaseObject(new ArcImpl, name)
+Arc::Arc(): IBaseObject(std::make_shared<ArcImpl>())
 {
 }
 
@@ -23,8 +23,11 @@ Rect * Arc::boundingBox()
   return nullptr;
 }
 
-void Arc::DrawObject() const
+void Arc::DrawObject(IWDraw *w) const
 {
+  std::shared_ptr<ArcImpl> curImpl =
+    (boost::dynamic_pointer_cast<ArcImpl>(d_pImpl));
+  //draw the
 }
 
 bool Arc::isValid() const
@@ -34,4 +37,7 @@ bool Arc::isValid() const
 
 void Arc::set(std::vector<double>& tmp)
 {
+  //add to check tmp.size()
+  (boost::dynamic_pointer_cast<ArcImpl>(d_pImpl))->setAllValueArc(
+  Point2d(tmp[0], tmp[1]), tmp[2], tmp[3], tmp[4]);
 }

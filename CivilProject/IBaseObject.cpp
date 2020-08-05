@@ -2,7 +2,12 @@
 
 IBaseObject::IBaseObject()
 {
-  impl = std::make_shared<BaseImpl>();
+  d_pImpl = std::make_shared<BaseImpl>();
+}
+
+IBaseObject::IBaseObject(std::shared_ptr<BaseImpl> implnew)
+{
+  d_pImpl = implnew;
 }
 
 

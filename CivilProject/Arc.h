@@ -10,7 +10,7 @@ public:
 
 public:
   virtual Rect* boundingBox();
-  virtual void DrawObject() const;
+  virtual void DrawObject(IWDraw *w) const;
   virtual bool isValid() const;
   //
   //virtual void save(IWriter*&) = 0;
