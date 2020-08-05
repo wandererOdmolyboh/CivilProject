@@ -62,9 +62,6 @@
     <ClInclude Include="Point2d.h">
       <Filter>Header Files\Base</Filter>
     </ClInclude>
-    <ClInclude Include="DataProvider.h">
-      <Filter>Header Files\Base</Filter>
-    </ClInclude>
     <ClInclude Include="Exceptions.h">
       <Filter>Header Files\Base</Filter>
     </ClInclude>
