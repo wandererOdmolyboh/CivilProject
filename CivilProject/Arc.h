@@ -16,5 +16,7 @@ public:
   //virtual void save(IWriter*&) = 0;
   //virtual void load(IReader*&) = 0;
   virtual void set(std::vector<double>& tmp);
+  void set(const Point2d &center, const double radius,
+    const double angleFirst, const double angleSecond);
 };
 

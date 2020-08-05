@@ -8,6 +8,7 @@ IBaseObject::IBaseObject()
 IBaseObject::IBaseObject(std::shared_ptr<BaseImpl> implnew)
 {
   d_pImpl = implnew;
+  //d_pImpl.
 }
 
 
@@ -23,6 +24,7 @@ IBaseObject::IBaseObject(const IBaseObject& rhs)
 
 IBaseObject& IBaseObject::operator=(const IBaseObject& rhs)
 {
+  return *this;
 }
 
 void IBaseObject::setName(std::string Name) 

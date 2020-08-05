@@ -5,6 +5,10 @@ BaseImpl::BaseImpl()
   m_dcurName = "";
 }
 
+BaseImpl::~BaseImpl()
+{
+}
+
 void BaseImpl::setName(std::string name)
 {
   m_dcurName = name;
