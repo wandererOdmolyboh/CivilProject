@@ -24,6 +24,7 @@ public:
   double getAngleFirst() const;
 
   double gettAngleSecond() const;
+  bool isValid() const;
 
 private:
   Point2d m_dCenter;

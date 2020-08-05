@@ -60,3 +60,9 @@ double ArcImpl::gettAngleSecond() const
 {
   return m_dAngle2;
 }
+
+bool ArcImpl::isValid() const
+{
+  if (radiuse < compare
+  return false;
+}
