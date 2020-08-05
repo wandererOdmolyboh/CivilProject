@@ -1,10 +1,14 @@
 #pragma once
+
+#include <iostream>
+#include <cmath>
+
 class Point2d
 {
 public:
 	Point2d();
 	Point2d(double xx, double yy);
-	~Point2d(void); //virtual 
+	~Point2d(void); 
 	double x() const;
 	double y() const;
 	virtual void set(double xx, double yy);

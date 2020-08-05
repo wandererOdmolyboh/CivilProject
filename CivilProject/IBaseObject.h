@@ -20,9 +20,11 @@ public:
 	//virtual void save(IWriter*&) = 0;
 	//virtual void load(IReader*&) = 0;
   virtual void set(std::vector<double>& tmp) = 0;
+  std::string getName() const;
+
 protected:
-	void setName(std::string) ;
-	std::string getName() const;
+	void setName(std::string);
+
 protected:
 	std::string name;
 private:

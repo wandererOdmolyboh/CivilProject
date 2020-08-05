@@ -1,6 +1,4 @@
 #include "Point2d.h"
-#include "Point2d.h"
-#include <cmath>
 
 Point2d::Point2d() : m_dX(0), m_dY(0)
 {
