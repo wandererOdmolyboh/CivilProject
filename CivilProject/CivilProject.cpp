@@ -1,10 +1,12 @@
 // CivilProject.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
-
+#include "Arc.h"
 #include <iostream>
 
 int main()
 {
+  Arc *p = new Arc();
+  p->set(Point2d(0, 0), 0.5, 0, 180);
     std::cout << "Hello World!\n";
 }
 

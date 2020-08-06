@@ -6,6 +6,7 @@
 #include <boost/pointer_cast.hpp>
 #include <boost/shared_ptr.hpp>
 #include "IWDraw.h"
+
 class Rect;
 class IBaseObject
 {
@@ -23,7 +24,7 @@ public:
 	//
 	//virtual void save(IWriter*&) = 0;
 	//virtual void load(IReader*&) = 0;
-  virtual void set(std::vector<double>& tmp) = 0;
+  virtual void set(const std::vector<double>& tmp) = 0;
   std::string getName() const;
 
 protected:

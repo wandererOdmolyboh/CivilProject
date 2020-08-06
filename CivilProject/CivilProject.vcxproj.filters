@@ -84,6 +84,9 @@
     <ClCompile Include="operation_w_double.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Circle.cpp">
+      <Filter>Source Files\Figure</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Point2d.h">
@@ -121,6 +124,12 @@
     </ClInclude>
     <ClInclude Include="Constant_Oda.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Circle.h">
+      <Filter>Header Files\Figure</Filter>
+    </ClInclude>
+    <ClInclude Include="Header.h">
+      <Filter>Header Files\Impl</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

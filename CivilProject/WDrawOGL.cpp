@@ -1,6 +1,14 @@
 #include "WDrawOGL.h"
 
-void WDrawOGL::drawSegment(const Point2d & p1, const Point2d & p2)
+WDrawOGL::WDrawOGL()
+{
+}
+
+WDrawOGL::~WDrawOGL()
+{
+}
+
+void WDrawOGL::drawSegment(const Point2d & p1, const Point2d & p2) const
 {
   //glBegin(GL_LINES);
   //  glVertex2f(p1.x(), p1.y());
@@ -8,7 +16,7 @@ void WDrawOGL::drawSegment(const Point2d & p1, const Point2d & p2)
   //glEnd();
 }
 
-void WDrawOGL::drawText(const char * text)
+void WDrawOGL::drawText(const char * text) const
 {
   std::cout << text << std::endl;
 }

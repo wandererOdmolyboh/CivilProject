@@ -23,13 +23,15 @@ public:
 
   double getAngleFirst() const;
 
-  double gettAngleSecond() const;
+  double getAngleSecond() const;
   bool isValid() const;
+  double circumference() const;
 
 private:
   Point2d m_dCenter;
   double m_dRadius;
   double m_dAngle1;
   double m_dAngle2;
+  double m_dcmfer;
 };
 

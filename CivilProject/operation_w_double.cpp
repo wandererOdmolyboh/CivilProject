@@ -3,7 +3,7 @@
 bool CompareDoubleMore(double a, double b)
 {
   double rez = abs(a - b);
-  if (rez > ErororComapre::Exp)
+  if (rez > ConstValue::Exp)
     return true;
   return false;
 }
@@ -11,7 +11,7 @@ bool CompareDoubleMore(double a, double b)
 bool CompareDoubleLess(double a, double b)
 {
   double rez = abs(a - b);
-  if (rez < ErororComapre::Exp)
+  if (rez < ConstValue::Exp)
     return true;
   return false;
 }
@@ -19,7 +19,8 @@ bool CompareDoubleLess(double a, double b)
 bool CompareDoubleEquall(double a, double b)
 {
   double rez = abs(a - b);
-  if (rez == ErororComapre::Exp)////????????? < && >
+
+  if (rez == ConstValue::Exp)////????????? < && >
     return true;
   return false;
 }
