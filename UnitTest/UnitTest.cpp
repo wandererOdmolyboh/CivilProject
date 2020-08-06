@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "CppUnitTest.h"
-//#include "../CivilProject/Arc.h"
+#include "../CivilProject/Arc.h"
+#include "../CivilProject/ArcImpl.h"
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace UnitTest
@@ -11,6 +12,7 @@ namespace UnitTest
 		
 		TEST_METHOD(TestMethod1)
 		{
+      ArcImpl *p = new ArcImpl();
       Assert::AreEqual(1, 1);
 		}
 

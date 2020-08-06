@@ -3,7 +3,7 @@
 
 Arc::Arc(): IBaseObject(std::make_shared<ArcImpl>())
 {
- 
+  d_pImpl->setName("Arc");
 }
 
 Arc::~Arc()
