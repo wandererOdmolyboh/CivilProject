@@ -3,5 +3,6 @@
 class ReadC :
   public IRead
 {
+
 };
 

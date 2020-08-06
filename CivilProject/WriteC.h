@@ -3,5 +3,6 @@
 class WriteC :
   public IWrite
 {
+
 };
 
