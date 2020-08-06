@@ -49,6 +49,18 @@
     <Filter Include="Source Files\ImplEntity">
       <UniqueIdentifier>{62f72853-5ebe-4e7d-a022-617f421bc7aa}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\ReadWrite">
+      <UniqueIdentifier>{865e3ec2-92c5-4bf4-ad89-5c7583c35729}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\NewFilter1">
+      <UniqueIdentifier>{3526c0e1-d4a5-4b1a-a4c6-59b1acee6c11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\NewFilter1">
+      <UniqueIdentifier>{1c12506d-26fd-40ba-990a-b3b658a0098d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ReadWrite">
+      <UniqueIdentifier>{d0eb1575-a2e8-4bf4-9917-44fe5cb4639a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CivilProject.cpp">
@@ -81,11 +93,29 @@
     <ClCompile Include="IBaseObject.cpp">
       <Filter>Source Files\Figure</Filter>
     </ClCompile>
-    <ClCompile Include="operation_w_double.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Circle.cpp">
       <Filter>Source Files\Figure</Filter>
+    </ClCompile>
+    <ClCompile Include="operation_w_double.cpp">
+      <Filter>Source Files\NewFilter1</Filter>
+    </ClCompile>
+    <ClCompile Include="IRead.cpp">
+      <Filter>Source Files\ReadWrite</Filter>
+    </ClCompile>
+    <ClCompile Include="IWrite.cpp">
+      <Filter>Source Files\ReadWrite</Filter>
+    </ClCompile>
+    <ClCompile Include="ReadC.cpp">
+      <Filter>Source Files\ReadWrite</Filter>
+    </ClCompile>
+    <ClCompile Include="ReadF.cpp">
+      <Filter>Source Files\ReadWrite</Filter>
+    </ClCompile>
+    <ClCompile Include="WriteF.cpp">
+      <Filter>Source Files\ReadWrite</Filter>
+    </ClCompile>
+    <ClCompile Include="WriteC.cpp">
+      <Filter>Source Files\ReadWrite</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -119,17 +149,35 @@
     <ClInclude Include="Arc.h">
       <Filter>Header Files\Figure</Filter>
     </ClInclude>
-    <ClInclude Include="operation_w_double.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Constant_Oda.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Circle.h">
       <Filter>Header Files\Figure</Filter>
     </ClInclude>
     <ClInclude Include="Header.h">
       <Filter>Header Files\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="Constant_Oda.h">
+      <Filter>Header Files\NewFilter1</Filter>
+    </ClInclude>
+    <ClInclude Include="operation_w_double.h">
+      <Filter>Header Files\NewFilter1</Filter>
+    </ClInclude>
+    <ClInclude Include="IRead.h">
+      <Filter>Header Files\ReadWrite</Filter>
+    </ClInclude>
+    <ClInclude Include="IWrite.h">
+      <Filter>Header Files\ReadWrite</Filter>
+    </ClInclude>
+    <ClInclude Include="WriteF.h">
+      <Filter>Header Files\ReadWrite</Filter>
+    </ClInclude>
+    <ClInclude Include="WriteC.h">
+      <Filter>Header Files\ReadWrite</Filter>
+    </ClInclude>
+    <ClInclude Include="ReadF.h">
+      <Filter>Header Files\ReadWrite</Filter>
+    </ClInclude>
+    <ClInclude Include="ReadC.h">
+      <Filter>Header Files\ReadWrite</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,5 +1,5 @@
 #pragma once
-class IRead
+class WriteF
 {
 };
 

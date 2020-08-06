@@ -1,6 +1,10 @@
 #include "WDrawCons.h"
 
 
+WDrawCons::WDrawCons()
+{
+}
+
 WDrawCons::~WDrawCons()
 {
 }
