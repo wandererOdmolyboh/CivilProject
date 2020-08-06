@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 #include "Point2d.h"
-#include "Constant_Oda.h"
+#include "operation_w_double.h"
 class BaseImpl
 {
 public:

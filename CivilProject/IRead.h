@@ -12,5 +12,6 @@ public:
 
   virtual int rdInt() = 0;
   virtual double rdDouble() = 0;
+  virtual Point2d rdPoint2() = 0;
 };
 

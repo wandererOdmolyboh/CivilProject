@@ -6,6 +6,8 @@ class ArcImpl : public BaseImpl
 public:
   ArcImpl();
   virtual ~ArcImpl();
+  
+  
   //check the set value???
   void setAllValueArc(const Point2d &center,
     const double radius, const double angleFirst,
@@ -26,12 +28,12 @@ public:
   double getAngleSecond() const;
   bool isValid() const;
   double circumference() const;
+  Point2d curSegment(double curAngle);
 
 private:
   Point2d m_dCenter;
   double m_dRadius;
   double m_dAngle1;
   double m_dAngle2;
-  double m_dcmfer;
 };
 

@@ -6,7 +6,7 @@ class WriteC :
 public:
   WriteC() {};
   virtual ~WriteC() {};
-  void wrPoint2(Point2d &tmp);
+  void wrPoint2(const Point2d &tmp);
   void wrInt(int tmp);
   void wrDouble(double tmp);
 };

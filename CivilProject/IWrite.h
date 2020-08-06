@@ -11,5 +11,6 @@ public:
 
   virtual void wrInt(int tmp) = 0;
   virtual void wrDouble(double tmp) = 0;
+  virtual void wrPoint2(Point2d &tmp) = 0;
 };
 

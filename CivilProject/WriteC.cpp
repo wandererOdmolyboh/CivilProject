@@ -1,6 +1,6 @@
 #include "WriteC.h"
 
-void WriteC::wrPoint2(Point2d & tmp)
+void WriteC::wrPoint2(const Point2d & tmp) 
 {
   std::cout << tmp.x() << " " << tmp.y() << std::endl;
 }

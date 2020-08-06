@@ -2,9 +2,9 @@
 
 namespace ConstValue
 {
-   const double Exp = 0.0002;
+   const double Tolerance = 0.0002;
    const double Pi = 3.141;
-   const double Step = 10.;
+   const double StepAngle = 10.;
 }
 
 namespace ConstErrorCode

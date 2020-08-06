@@ -151,7 +151,6 @@
     <ClCompile Include="Exceptions.cpp" />
     <ClCompile Include="IRead.cpp" />
     <ClCompile Include="IWDraw.cpp" />
-    <ClCompile Include="IWrite.cpp" />
     <ClCompile Include="operation_w_double.cpp" />
     <ClCompile Include="Point2d.cpp" />
     <ClCompile Include="ReadC.cpp" />

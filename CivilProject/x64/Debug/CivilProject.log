@@ -1,4 +1,6 @@
-﻿  ReadC.cpp
-  WriteC.cpp
+﻿  Arc.cpp
+c:\git\civilproject\civilproject\arc.cpp(12): warning C4100: 'obj': unreferenced formal parameter
+c:\git\civilproject\civilproject\arc.cpp(16): warning C4100: 'rhs': unreferenced formal parameter
+  WriteF.cpp
   Generating Code...
   CivilProject.vcxproj -> C:\git\CivilProject\x64\Debug\CivilProject.exe

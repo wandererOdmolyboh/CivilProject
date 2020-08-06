@@ -6,6 +6,8 @@
 #include <boost/pointer_cast.hpp>
 #include <boost/shared_ptr.hpp>
 #include "IWDraw.h"
+#include "IWrite.h"
+#include "IRead.h"
 
 class Rect;
 class IBaseObject
@@ -22,8 +24,8 @@ public:
   virtual void DrawObject(IWDraw *w) const = 0;
   virtual bool isValid() const = 0;
 	//
-	//virtual void save(IWriter*&) = 0;
-	//virtual void load(IReader*&) = 0;
+	virtual void save(IWrite &) = 0;
+	virtual void load(IRead &) = 0;
   virtual void set(const std::vector<double>& tmp) = 0;
   std::string getName() const;
 

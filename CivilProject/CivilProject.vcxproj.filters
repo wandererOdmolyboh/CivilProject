@@ -19,17 +19,11 @@
     <Filter Include="Header Files\Figure">
       <UniqueIdentifier>{3722b077-2dd4-447c-be00-6023e63733a6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\InOtFile">
-      <UniqueIdentifier>{f1c6e3f3-0611-417a-864f-0d489f4447c2}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Base">
       <UniqueIdentifier>{27af5290-8819-47a7-80d8-791b181e5510}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Figure">
       <UniqueIdentifier>{1617261d-c822-4194-a93b-ac02a792ee5d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\InOtFile">
-      <UniqueIdentifier>{c518dda6-6ab7-4000-b285-9c9c807236c7}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\Draw">
       <UniqueIdentifier>{aa336639-dbcf-406f-aa7f-329debb9a8b9}</UniqueIdentifier>
@@ -103,9 +97,6 @@
       <Filter>Source Files\NewFilter1</Filter>
     </ClCompile>
     <ClCompile Include="IRead.cpp">
-      <Filter>Source Files\ReadWrite</Filter>
-    </ClCompile>
-    <ClCompile Include="IWrite.cpp">
       <Filter>Source Files\ReadWrite</Filter>
     </ClCompile>
     <ClCompile Include="ReadC.cpp">

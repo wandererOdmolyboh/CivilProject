@@ -19,7 +19,11 @@ void ArcImpl::setAllValueArc(const Point2d &center,
   m_dCenter = center;
   m_dRadius = radius;
   m_dAngle1 = angleFirst;
+  if (m_dAngle1 > 360)
+    m_dAngle1 = 360;
   m_dAngle2 = angleSecond;
+  if (m_dAngle2 > 360)
+    m_dAngle2 = 360;
 }
 void ArcImpl::setCenter(const Point2d &center)
 {
@@ -63,11 +67,18 @@ double ArcImpl::getAngleSecond() const
 
 bool ArcImpl::isValid() const
 {
-  /*if (radiuse < compare*/
-  return false;
+  if (CompareDoubleLess(m_dRadius, 0))
+    return false;
+  return true;
 }
 
 double ArcImpl::circumference() const
 {
   return (abs(((m_dAngle2 - m_dAngle1) * ConstValue::Pi / 180) * m_dRadius));
+}
+
+Point2d ArcImpl::curSegment(double curAngle)
+{
+  return Point2d(m_dCenter.x() + m_dRadius * cos(curAngle * ConstValue::Pi / 180),
+    m_dCenter.y() + m_dRadius * sin(curAngle * ConstValue::Pi / 180));
 }
