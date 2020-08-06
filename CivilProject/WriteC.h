@@ -3,6 +3,11 @@
 class WriteC :
   public IWrite
 {
-
+public:
+  WriteC() {};
+  virtual ~WriteC() {};
+  void wrPoint2(Point2d &tmp);
+  void wrInt(int tmp);
+  void wrDouble(double tmp);
 };
 
