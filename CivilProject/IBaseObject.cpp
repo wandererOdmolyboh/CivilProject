@@ -20,17 +20,25 @@ IBaseObject::~IBaseObject()
 
 IBaseObject::IBaseObject(const IBaseObject& rhs)
 {
-	*this = rhs;
+  copyFrom(rhs);
 }
 
 IBaseObject& IBaseObject::operator=(const IBaseObject& rhs)
 {
+  d_pImpl.reset();
+  copyFrom(rhs);
   return *this;
 }
 
 void IBaseObject::setName(std::string Name) 
 {
 }
+
+void IBaseObject::copyFrom(const IBaseObject & rhs)
+{
+  this->d_pImpl = rhs.d_pImpl;
+}
+
 
 std::string IBaseObject::getName() const
 {

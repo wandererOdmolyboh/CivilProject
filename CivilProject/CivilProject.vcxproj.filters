@@ -173,5 +173,8 @@
     <ClInclude Include="IRead.h">
       <Filter>Header Files\ReadWrite\InterFace</Filter>
     </ClInclude>
+    <ClInclude Include="EnumEntityType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
