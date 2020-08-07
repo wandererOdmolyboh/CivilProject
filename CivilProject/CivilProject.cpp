@@ -3,13 +3,13 @@
 #include "Arc.h"
 #include <iostream>
 
-void foo()
-{
-  for (int i = 0; i < 100000; ++i)
-  {
-    double d = i * 2 % 10;
-  }
-}
+//void foo()
+//{
+//  for (int i = 0; i < 100000; ++i)
+//  {
+//    double d = i * 2 % 10;
+//  }
+//}
 
 int main()
 {
@@ -19,10 +19,9 @@ int main()
   delete p;
   std::cout << "Hello World!\n";
     int  i = 0;
-    foo();
+    //foo();
     while (true)
     {
-      Arc *p = new Arc();
       if (i == 1000)
         break;
       i++;

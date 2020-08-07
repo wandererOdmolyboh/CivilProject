@@ -11,7 +11,7 @@ Arc::~Arc()
 
 }
 
-Arc::Arc(const Arc & rhs) : IBaseObject(std::make_shared<ArcImpl>())
+Arc::Arc(const Arc & rhs) : IBaseObject(nullptr)
 {
   d_pImpl->setName("Arc");
   copyFrom(rhs);
