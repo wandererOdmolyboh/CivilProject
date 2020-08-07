@@ -104,7 +104,7 @@ namespace UnitTest
 
 
     TEST_METHOD(Test_wIncorectData)
-    {
+    {//todo add check valid figure
       try
       {
         ArcImpl *p = new ArcImpl();
@@ -118,17 +118,12 @@ namespace UnitTest
         Assert::AreEqual(TestDataArcInc::AngleF, p->getAngleFirst());
         Assert::AreEqual(TestDataArcInc::AngleS, p->getAngleSecond());
 
-        Assert::AreEqual(TestDataArcInc::Radiuse, p->getRadiuse());
+        Assert::AreNotEqual(TestDataArcInc::Radiuse, p->getRadiuse());
 
         Assert::AreEqual(TestDataArcInc::Center.x(), p->getCenter().x());
         Assert::AreEqual(TestDataArcInc::Center.y(), p->getCenter().y());
-
-
-        double a_d = abs(TestDataArcInc::AngleF - TestDataArcInc::AngleS);
-        double L1 = a_d * ConstValue::Pi / 180 * TestDataArcInc::Radiuse; // todo magic number how to fix?
-        double L2 = a_d / 360 * 2 * ConstValue::Pi * TestDataArcInc::Radiuse;
-        Assert::AreEqual(p->circumference(), L1);
-        Assert::AreEqual(p->circumference(), L2);
+       
+        Assert::AreEqual(p->isValid(), false);
 
         delete p;
       }

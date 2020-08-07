@@ -32,7 +32,8 @@ void ArcImpl::setCenter(const Point2d &center)
 
 void ArcImpl::setRadiuse(const double radius)
 {
-  m_dRadius = radius;
+  if (radius > 0)
+    m_dRadius = radius;
 }
 
 void ArcImpl::setAngleFirst(const double angleFirst)
