@@ -1,13 +1,13 @@
 #pragma once
 #include "IBaseObject.h"
-
-class Arc : public IBaseObject
+class Polyline :
+  public IBaseObject
 {
 public:
-  Arc();
-  virtual ~Arc();
-  Arc(const Arc& obj);
-  Arc& operator=(const Arc& rhs);
+  Polyline();
+  virtual ~Polyline();
+  Polyline(const Polyline& obj);
+  Polyline& operator=(const Polyline& rhs);
 
 public:
   virtual Rect* boundingBox() const;
@@ -16,9 +16,8 @@ public:
   double circumference() const;
   virtual void save(IWrite *);
   virtual void load(IRead *);
-  virtual void set(const doubleVec& tmp);
+  virtual void set(const std::vector<double>& tmp);
   virtual void set(const Point2d &center, const double radius,
     const double angleFirst, const double angleSecond);
-private: void copyFrom(const Arc& rhs);
+private: void copyFrom(const Polyline& rhs);
 };
-

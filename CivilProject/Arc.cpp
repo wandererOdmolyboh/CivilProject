@@ -40,11 +40,11 @@ void Arc::DrawObject(IWDraw *w) const
   double angl1 = curImpl->getAngleFirst();// how to formate data?
 	double angl2 = curImpl->getAngleSecond(); // how to formate data?
 	w->drawText(curImpl->getName().c_str());
-	Point2d p1(curImpl->curSegment(angl1));
+	Point2d p1(curImpl->curPointAngle(angl1));
   Point2d p2;
 	for (double i = angl1 + ConstValue::StepAngle; i <= angl2; i += ConstValue::StepAngle)
 	{
-		p2 = (curImpl->curSegment(i));
+		p2 = (curImpl->curPointAngle(i));
 		w->drawSegment(p1, p2);
 		p1 = p2;
 	}
@@ -62,13 +62,12 @@ bool Arc::isValid() const
 double Arc::circumference() const
 {
   return (boost::dynamic_pointer_cast<ArcImpl>(d_pImpl))->circumference();
- 
 }
 
 void Arc::save(IWrite *w)
 {
   if (!w->isOpen())
-    throw ReadError("File not open");
+    throw ReadError("Writer not not available");
   std::shared_ptr<ArcImpl> curImpl =
     (boost::dynamic_pointer_cast<ArcImpl>(d_pImpl));
   w->wrInt(EArc);
@@ -85,7 +84,7 @@ void Arc::save(IWrite *w)
 void Arc::load(IRead *r)
 {
   if (!r->isOpen())
-    throw ReadError("File not open");
+    throw ReadError("Reder not not available");
   std::shared_ptr<ArcImpl> curImpl =
     (boost::dynamic_pointer_cast<ArcImpl>(d_pImpl));
   curImpl->setCenter(r->rdPoint2());
@@ -94,7 +93,7 @@ void Arc::load(IRead *r)
   curImpl->setAngleSecond(r->rdDouble());
 }
 
-void Arc::set(const std::vector<double>& tmp)
+void Arc::set(const doubleVec& tmp)
 {
   if (tmp.size() != 5)
   {

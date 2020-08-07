@@ -15,7 +15,7 @@ public:
   double circumference() const;
   virtual void save(IWrite *);
   virtual void load(IRead *);
-  virtual void set(const std::vector<double>& tmp);
+  virtual void set(const doubleVec& tmp);
   virtual void set(const Point2d &center, const double radius,
     const double angleFirst, const double angleSecond);
 private: void copyFrom(const Circle& rhs);

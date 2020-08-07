@@ -1,19 +1,18 @@
 #include "Circle.h"
-
-Circle::Circle()
+Circle::Circle() : IBaseObject(std::make_shared<BaseImpl>())
 {
   d_pImpl->setName("Circle");
 }
 
 Circle::~Circle()
 {
-
 }
 
-Circle::Circle(const Circle & rhs) : IBaseObject(nullptr)
+Circle::Circle(const Circle & rhs) : IBaseObject(std::make_shared<BaseImpl>())
 {
   copyFrom(rhs);
 }
+
 Circle & Circle::operator=(const Circle & rhs)
 {
   if (this == &rhs)
@@ -49,14 +48,7 @@ double Circle::circumference() const
 
 void Circle::save(IWrite *w)
 {
-    try
-    {
       impCirc.save(w);
-    }
-    catch (const ReadError&)
-    {
-      throw ReadError("File not open");
-    }
 }
 
 void Circle::load(IRead *r)
@@ -64,7 +56,7 @@ void Circle::load(IRead *r)
   impCirc.load(r);
 }
 
-void Circle::set(const std::vector<double>& tmp)
+void Circle::set(const doubleVec& tmp)
 { 
   impCirc.set(tmp);
 }

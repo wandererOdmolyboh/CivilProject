@@ -26,9 +26,8 @@ public:
   double getAngleFirst() const;
 
   double getAngleSecond() const;
-  bool isValid() const;
   double circumference() const;
-  Point2d curSegment(double curAngle);
+  Point2d curPointAngle(double curAngle);
 
 private:
   Point2d m_dCenter;

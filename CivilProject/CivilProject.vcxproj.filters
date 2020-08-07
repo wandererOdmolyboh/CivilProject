@@ -108,6 +108,12 @@
     <ClCompile Include="WriteC.cpp">
       <Filter>Source Files\ReadWrite</Filter>
     </ClCompile>
+    <ClCompile Include="Polyline.cpp">
+      <Filter>Source Files\Figure</Filter>
+    </ClCompile>
+    <ClCompile Include="PolylineImpl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Point2d.h">
@@ -169,6 +175,12 @@
     </ClInclude>
     <ClInclude Include="EnumEntityType.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Polyline.h">
+      <Filter>Header Files\Figure</Filter>
+    </ClInclude>
+    <ClInclude Include="PolylineImpl.h">
+      <Filter>Header Files\Impl</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

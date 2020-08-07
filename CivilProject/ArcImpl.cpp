@@ -32,7 +32,6 @@ void ArcImpl::setCenter(const Point2d &center)
 
 void ArcImpl::setRadiuse(const double radius)
 {
-  if (radius > 0)
     m_dRadius = radius;
 }
 
@@ -66,19 +65,12 @@ double ArcImpl::getAngleSecond() const
   return m_dAngle2;
 }
 
-bool ArcImpl::isValid() const
-{
-  if (CompareDoubleLess(m_dRadius, 0))
-    return false;
-  return true;
-}
-
 double ArcImpl::circumference() const
 {
   return (abs(((m_dAngle2 - m_dAngle1) * ConstValue::Pi / 180) * m_dRadius));
 }
 
-Point2d ArcImpl::curSegment(double curAngle)
+Point2d ArcImpl::curPointAngle(double curAngle)
 {
   return Point2d(m_dCenter.x() + m_dRadius * cos(curAngle * ConstValue::Pi / 180),
     m_dCenter.y() + m_dRadius * sin(curAngle * ConstValue::Pi / 180));

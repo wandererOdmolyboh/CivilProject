@@ -9,7 +9,6 @@ IBaseObject::IBaseObject()
 IBaseObject::IBaseObject(std::shared_ptr<BaseImpl> implnew)
 {
   d_pImpl = implnew;
-  //d_pImpl.
 }
 
 
