@@ -16,6 +16,8 @@ Circle::Circle(const Circle & rhs) : IBaseObject(nullptr)
 }
 Circle & Circle::operator=(const Circle & rhs)
 {
+  if (this == &rhs)
+    return *this;
   copyFrom(rhs);
   return *this;
 }

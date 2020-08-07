@@ -16,9 +16,11 @@ Arc::Arc(const Arc & rhs) : IBaseObject(nullptr)
   d_pImpl->setName("Arc");
   copyFrom(rhs);
 }
-//todo wtf?
+
 Arc & Arc::operator=(const Arc & rhs)
 {
+  if (this == &rhs)
+    return *this;
   d_pImpl.reset();
   copyFrom(rhs);
   return *this;

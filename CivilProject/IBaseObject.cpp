@@ -25,6 +25,8 @@ IBaseObject::IBaseObject(const IBaseObject& rhs)
 
 IBaseObject& IBaseObject::operator=(const IBaseObject& rhs)
 {
+  if (this == &rhs)
+    return *this;
   d_pImpl.reset();
   copyFrom(rhs);
   return *this;
