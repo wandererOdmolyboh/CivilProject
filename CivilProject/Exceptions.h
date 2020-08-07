@@ -37,3 +37,21 @@ private:
   std::string m_error;
 };
 
+
+class ErorDataFigure : public std::exception
+{
+public:
+  ErorDataFigure(void) = delete;
+  ~ErorDataFigure(void) {}
+
+  ErorDataFigure(std::string error) : m_error(error)
+  {
+  }
+
+  const char* what() const noexcept
+  {
+    return m_error.c_str();
+  }
+private:
+  std::string m_error;
+};

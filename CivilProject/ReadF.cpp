@@ -58,7 +58,7 @@ void ReadF::open(std::string name)
   m_ifinfile.open(tmp_name, std::ios::binary | std::ios::in | std::ios::out);
 }
 
-bool ReadF::isOpen()
+bool ReadF::isOpen() const
 {
   if (m_ifinfile.is_open())
     return true;

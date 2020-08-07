@@ -9,7 +9,7 @@ BaseImpl::~BaseImpl()
 {
 }
 
-void BaseImpl::setName(std::string name)
+void BaseImpl::setName(const std::string name)
 {
   m_dcurName = name;
 }

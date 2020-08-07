@@ -8,5 +8,6 @@ public:
   Point2d rdPoint2();
   int rdInt();
   double rdDouble();
+  virtual bool isOpen() const;
 };
 

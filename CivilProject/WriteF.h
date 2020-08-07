@@ -10,7 +10,7 @@ public:
   virtual void wrInt(int tmp) ;
   virtual void wrDouble(double tmp) ;
   void open(const std::string name);
-  bool isOpen();
+  virtual bool isOpen() const = 0;
 private:
   std::ofstream m_ofoutfile;
 };

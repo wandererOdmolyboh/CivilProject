@@ -11,7 +11,7 @@ public:
   int rdInt();
   double rdDouble();
   void open(std::string name);
-  bool isOpen();
+  virtual bool isOpen() const = 0;
 
 private:
   std::ifstream m_ifinfile;

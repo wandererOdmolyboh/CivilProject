@@ -23,7 +23,7 @@ Arc & Arc::operator=(const Arc & rhs)
   return *this;
 }
 
-Rect * Arc::boundingBox()
+Rect * Arc::boundingBox() const
 {
   return nullptr;//todo  Rect
 }
@@ -64,7 +64,8 @@ double Arc::circumference() const
 
 void Arc::save(IWrite *w)
 {
-  
+  if (!w->isOpen())
+    throw ReadError("File not open");
   std::shared_ptr<ArcImpl> curImpl =
     (boost::dynamic_pointer_cast<ArcImpl>(d_pImpl));
   w->wrInt(EArc);
@@ -80,6 +81,8 @@ void Arc::save(IWrite *w)
 
 void Arc::load(IRead *r)
 {
+  if (!r->isOpen())
+    throw ReadError("File not open");
   std::shared_ptr<ArcImpl> curImpl =
     (boost::dynamic_pointer_cast<ArcImpl>(d_pImpl));
   curImpl->setCenter(r->rdPoint2());
@@ -92,16 +95,19 @@ void Arc::set(const std::vector<double>& tmp)
 {
   if (tmp.size() != 5)
   {
-    std::cout << "bad size vector" << std::endl;
-    return ;
+    throw ErorDataFigure("Bad size vector");
+    //std::cout << "bad size vector" << std::endl; // or Exeption?
+    //return ;
   }
   if (CompareDoubleLess(tmp[2], 0)) // todo compare
   {
-    std::cout << "bad radiuse" << std::endl;
-    return ;
+    throw ErorDataFigure("Bad radius");
+    //std::cout << "bad radius" << std::endl;
+    //return ;
   }
   (boost::dynamic_pointer_cast<ArcImpl>(d_pImpl))->setAllValueArc(
-  Point2d(tmp[0], tmp[1]), tmp[2], tmp[3], tmp[4]);
+    Point2d(tmp[0], tmp[1]), tmp[2], tmp[3], tmp[4]
+      );
 }
 
 void Arc::set(const Point2d & center, const double radius, 
@@ -109,8 +115,9 @@ void Arc::set(const Point2d & center, const double radius,
 {
   if (CompareDoubleLess(radius, 0)) // todo compare
   {
-    std::cout << "bad radiuse" << std::endl;
-    return;
+   /* std::cout << "bad radiuse" << std::endl;
+    return;*/
+    throw ErorDataFigure("Bad radius");
   }
   (boost::dynamic_pointer_cast<ArcImpl>(d_pImpl))->setAllValueArc(
     center, radius, angleFirst, angleSecond);

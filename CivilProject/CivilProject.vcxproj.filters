@@ -96,9 +96,6 @@
     <ClCompile Include="operation_w_double.cpp">
       <Filter>Source Files\NewFilter1</Filter>
     </ClCompile>
-    <ClCompile Include="IRead.cpp">
-      <Filter>Source Files\ReadWrite</Filter>
-    </ClCompile>
     <ClCompile Include="ReadC.cpp">
       <Filter>Source Files\ReadWrite</Filter>
     </ClCompile>

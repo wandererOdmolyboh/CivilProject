@@ -149,7 +149,6 @@
     <ClCompile Include="IBaseObject.cpp" />
     <ClCompile Include="CivilProject.cpp" />
     <ClCompile Include="Exceptions.cpp" />
-    <ClCompile Include="IRead.cpp" />
     <ClCompile Include="IWDraw.cpp" />
     <ClCompile Include="operation_w_double.cpp" />
     <ClCompile Include="Point2d.cpp" />

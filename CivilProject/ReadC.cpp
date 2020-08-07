@@ -25,3 +25,8 @@ double ReadC::rdDouble()
   std::cin >> x;
   return (x);
 }
+bool ReadC::isOpen() const
+{
+  return true;
+}
+

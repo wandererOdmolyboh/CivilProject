@@ -10,7 +10,7 @@ public:
   Arc& operator=(const Arc& rhs);
 
 public:
-  virtual Rect* boundingBox();
+  virtual Rect* boundingBox() const;
   virtual void DrawObject(IWDraw *w) const;
   virtual bool isValid() const;
   double circumference() const;

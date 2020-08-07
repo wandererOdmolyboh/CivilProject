@@ -9,5 +9,6 @@ public:
   void wrPoint2(const Point2d &tmp);
   void wrInt(int tmp);
   void wrDouble(double tmp);
+  virtual bool isOpen() const = 0;
 };
 

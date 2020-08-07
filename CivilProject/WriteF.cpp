@@ -40,7 +40,7 @@ void WriteF::open(std::string name)
     m_ofoutfile.open(name, std::ios::binary | std::ios::in | std::ios::out | std::ios::app);
 }
 
-bool WriteF::isOpen()
+bool WriteF::isOpen() const
 {
   if (m_ofoutfile.is_open())
     return true;

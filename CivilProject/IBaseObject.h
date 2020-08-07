@@ -20,7 +20,7 @@ public:
 	IBaseObject& operator=(const IBaseObject& rhs);
 
 public:
-	virtual Rect* boundingBox() = 0; 
+	virtual Rect* boundingBox() const = 0; 
   virtual void DrawObject(IWDraw *w) const = 0;
   virtual bool isValid() const = 0;
 	
@@ -30,7 +30,7 @@ public:
   std::string getName() const;
 
 protected:
-	void setName(std::string);
+	void setName(const std::string);
   std::shared_ptr<BaseImpl> d_pImpl;
 private:
  void copyFrom(const IBaseObject& rhs);

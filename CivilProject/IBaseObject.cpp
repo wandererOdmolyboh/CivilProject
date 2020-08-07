@@ -30,8 +30,9 @@ IBaseObject& IBaseObject::operator=(const IBaseObject& rhs)
   return *this;
 }
 
-void IBaseObject::setName(std::string Name) 
+void IBaseObject::setName(const std::string Name) 
 {
+  this->d_pImpl->setName(Name);
 }
 
 void IBaseObject::copyFrom(const IBaseObject & rhs)

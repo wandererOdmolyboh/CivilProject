@@ -14,3 +14,8 @@ void WriteC::wrDouble(double tmp)
 {
   std::cout << tmp << std::endl;
 }
+
+bool WriteC::isOpen() const
+{
+  return true;
+}
