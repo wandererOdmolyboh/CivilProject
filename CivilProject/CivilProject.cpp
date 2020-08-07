@@ -3,11 +3,30 @@
 #include "Arc.h"
 #include <iostream>
 
+void foo()
+{
+  for (int i = 0; i < 100000; ++i)
+  {
+    double d = i * 2 % 10;
+  }
+}
+
 int main()
 {
   Arc *p = new Arc();
+
   p->set(Point2d(0, 0), 0.5, 0, 180);
-    std::cout << "Hello World!\n";
+  delete p;
+  std::cout << "Hello World!\n";
+    int  i = 0;
+    foo();
+    while (true)
+    {
+      Arc *p = new Arc();
+      if (i == 1000)
+        break;
+      i++;
+    }
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

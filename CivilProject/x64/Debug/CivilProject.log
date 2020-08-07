@@ -1,2 +1,6 @@
-﻿  Arc.cpp
+﻿  CivilProject.cpp
+c:\git\civilproject\civilproject\civilproject.cpp(10): warning C4189: 'd': local variable is initialized but not referenced
+c:\git\civilproject\civilproject\civilproject.cpp(23): warning C4456: declaration of 'p' hides previous local declaration
+  c:\git\civilproject\civilproject\civilproject.cpp(16): note: see declaration of 'p'
+c:\git\civilproject\civilproject\civilproject.cpp(23): warning C4189: 'p': local variable is initialized but not referenced
   CivilProject.vcxproj -> C:\git\CivilProject\x64\Debug\CivilProject.exe

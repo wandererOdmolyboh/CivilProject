@@ -13,6 +13,7 @@ Arc::~Arc()
 
 Arc::Arc(const Arc & rhs) : IBaseObject(std::make_shared<ArcImpl>())
 {
+  d_pImpl->setName("Arc");
   copyFrom(rhs);
 }
 //todo wtf?
@@ -39,7 +40,7 @@ void Arc::DrawObject(IWDraw *w) const
 	w->drawText(curImpl->getName().c_str());
 	Point2d p1(curImpl->curSegment(angl1));
   Point2d p2;
-	for (double i = angl1; i <= angl2; i += ConstValue::StepAngle)
+	for (double i = angl1 + ConstValue::StepAngle; i <= angl2; i += ConstValue::StepAngle)
 	{
 		p2 = (curImpl->curSegment(i));
 		w->drawSegment(p1, p2);
