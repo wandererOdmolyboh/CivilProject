@@ -143,9 +143,6 @@
     <ClInclude Include="Circle.h">
       <Filter>Header Files\Figure</Filter>
     </ClInclude>
-    <ClInclude Include="Header.h">
-      <Filter>Header Files\Impl</Filter>
-    </ClInclude>
     <ClInclude Include="Constant_Oda.h">
       <Filter>Header Files\NewFilter1</Filter>
     </ClInclude>

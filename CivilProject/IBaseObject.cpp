@@ -1,10 +1,10 @@
 #include "IBaseObject.h"
 
-IBaseObject::IBaseObject()
-{
-  d_pImpl = std::make_shared<BaseImpl>();
-  //
-}
+//IBaseObject::IBaseObject()
+//{
+//  d_pImpl = std::make_shared<BaseImpl>();
+//  //
+//}
 
 IBaseObject::IBaseObject(std::shared_ptr<BaseImpl> implnew)
 {

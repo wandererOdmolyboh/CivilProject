@@ -11,11 +11,11 @@ Arc::~Arc()
 
 }
 
-Arc::Arc(const Arc & rhs)
+Arc::Arc(const Arc & rhs) : IBaseObject(std::make_shared<ArcImpl>())
 {
   copyFrom(rhs);
 }
-
+//todo wtf?
 Arc & Arc::operator=(const Arc & rhs)
 {
   d_pImpl.reset();

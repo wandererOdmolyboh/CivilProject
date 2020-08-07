@@ -13,7 +13,7 @@ class Rect;
 class IBaseObject
 {
 public:
-	IBaseObject();
+	//IBaseObject();
   IBaseObject(std::shared_ptr<BaseImpl> impl);
 	virtual ~IBaseObject();
 	IBaseObject(const IBaseObject& obj);

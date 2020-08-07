@@ -1,12 +1,2 @@
 ﻿  Arc.cpp
-  ArcImpl.cpp
-  BaseImpl.cpp
-  CivilProject.cpp
-  IBaseObject.cpp
-  ReadC.cpp
-  ReadF.cpp
-  WriteC.cpp
-  WriteF.cpp
-  operation_w_double.cpp
-  Generating Code...
   CivilProject.vcxproj -> C:\git\CivilProject\x64\Debug\CivilProject.exe

@@ -166,7 +166,6 @@
     <ClInclude Include="Circle.h" />
     <ClInclude Include="Constant_Oda.h" />
     <ClInclude Include="EnumEntityType.h" />
-    <ClInclude Include="Header.h" />
     <ClInclude Include="IBaseObject.h" />
     <ClInclude Include="Exceptions.h" />
     <ClInclude Include="Full_libs.h" />
