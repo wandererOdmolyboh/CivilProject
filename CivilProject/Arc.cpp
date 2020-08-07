@@ -31,7 +31,7 @@ Rect * Arc::boundingBox() const
 void Arc::DrawObject(IWDraw *w) const
 {
   if (!isValid())
-    return;
+    throw ErorDataFigure("Figure is not valid cannot draw object");
   std::shared_ptr<ArcImpl> curImpl =
     (boost::dynamic_pointer_cast<ArcImpl>(d_pImpl));
   double angl1 = curImpl->getAngleFirst();// how to formate data?
