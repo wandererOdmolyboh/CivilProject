@@ -1,2 +1,4 @@
-﻿  UnitTest.cpp
+﻿  pch.cpp
+  UnitTest.cpp
+     Creating library C:\git\CivilProject\x64\Debug\UnitTest.lib and object C:\git\CivilProject\x64\Debug\UnitTest.exp
   UnitTest.vcxproj -> C:\git\CivilProject\x64\Debug\UnitTest.dll
