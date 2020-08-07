@@ -53,7 +53,7 @@ void ReadF::open(std::string name)
 {
   const char *tmp_name = name.c_str();
 
-  if (isOpen())
+  if (m_ifinfile.is_open())
     m_ifinfile.close();
   m_ifinfile.open(tmp_name, std::ios::binary | std::ios::in | std::ios::out);
 }

@@ -67,7 +67,7 @@ void Arc::save(IWrite *w)
   
   std::shared_ptr<ArcImpl> curImpl =
     (boost::dynamic_pointer_cast<ArcImpl>(d_pImpl));
-  w->wrInt(4);
+  w->wrInt(EArc);
   Point2d t1 = curImpl->getCenter();
   w->wrPoint2(t1);
   double tmp = curImpl->getRadiuse();

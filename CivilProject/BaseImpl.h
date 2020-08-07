@@ -2,6 +2,7 @@
 #include <iostream>
 #include "Point2d.h"
 #include "operation_w_double.h"
+#include "EnumEntityType.h"
 class BaseImpl
 {
 public:
