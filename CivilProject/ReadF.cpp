@@ -11,7 +11,9 @@ ReadF::~ReadF()
 
 Point2d ReadF::rdPoint2()
 {
-  if (m_ifinfile.good() == false)
+  if (!m_ifinfile.is_open())
+    throw ReadError("File not open");
+  if (m_ifinfile.good() == false) // todo add name to construct
     throw EndOfFile("");
   Point2d tmp;
   m_ifinfile.read(reinterpret_cast<char *>(&tmp), sizeof(Point2d));
@@ -23,6 +25,8 @@ Point2d ReadF::rdPoint2()
 
 int ReadF::rdInt()
 {
+  if (!m_ifinfile.is_open())
+    throw ReadError("File not open");
   if (m_ifinfile.good() == false)
     throw EndOfFile("");
   int tmp;
@@ -34,6 +38,8 @@ int ReadF::rdInt()
 
 double ReadF::rdDouble()
 {
+  if (!m_ifinfile.is_open())
+    throw ReadError("File not open");
   if (m_ifinfile.good() == false)
     throw EndOfFile("");
   double tmp;

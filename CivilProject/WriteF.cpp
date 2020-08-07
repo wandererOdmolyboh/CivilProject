@@ -1,5 +1,5 @@
 #include "WriteF.h"
-
+#include "Exceptions.h" 
 WriteF::WriteF()
 {
 }
@@ -12,14 +12,14 @@ WriteF::~WriteF()
 void WriteF::wrInt(int tmp)
 {
   if (!isOpen())
-    return;
+    throw ReadError("File not open");
   m_ofoutfile.write(reinterpret_cast<char *>(&tmp), sizeof(int));
 }
 
 void WriteF::wrDouble(double tmp)
 {
   if (!isOpen())
-    return;
+    throw ReadError("File not open");
 
   m_ofoutfile.write(reinterpret_cast<char *>(&tmp), sizeof(double));
 }
@@ -27,7 +27,7 @@ void WriteF::wrDouble(double tmp)
 void WriteF::wrPoint2(Point2d &tmp)
 {
   if (!isOpen())
-    return;
+    throw ReadError("File not open");
   m_ofoutfile.write(reinterpret_cast<char *>(&tmp), sizeof(Point2d));
 }
 

@@ -13,7 +13,7 @@
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 
-
+//todo add test for compare double 
 namespace UnitTest
 {
   namespace TestDataArc

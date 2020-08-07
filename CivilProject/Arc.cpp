@@ -62,29 +62,30 @@ double Arc::circumference() const
  
 }
 
-void Arc::save(IWrite &w)
+void Arc::save(IWrite *w)
 {
+  
   std::shared_ptr<ArcImpl> curImpl =
     (boost::dynamic_pointer_cast<ArcImpl>(d_pImpl));
-  w.wrInt(4);
+  w->wrInt(4);
   Point2d t1 = curImpl->getCenter();
-  w.wrPoint2(t1);
+  w->wrPoint2(t1);
   double tmp = curImpl->getRadiuse();
-  w.wrDouble(tmp);
+  w->wrDouble(tmp);
   tmp = curImpl->getAngleFirst();
-  w.wrDouble(tmp);
+  w->wrDouble(tmp);
   tmp = curImpl->getAngleSecond();
-  w.wrDouble(tmp);
+  w->wrDouble(tmp);
 }
 
-void Arc::load(IRead &r)
+void Arc::load(IRead *r)
 {
   std::shared_ptr<ArcImpl> curImpl =
     (boost::dynamic_pointer_cast<ArcImpl>(d_pImpl));
-  curImpl->setCenter(r.rdPoint2());
-  curImpl->setRadiuse(r.rdDouble());
-  curImpl->setAngleFirst(r.rdDouble());
-  curImpl->setAngleSecond(r.rdDouble());
+  curImpl->setCenter(r->rdPoint2());
+  curImpl->setRadiuse(r->rdDouble());
+  curImpl->setAngleFirst(r->rdDouble());
+  curImpl->setAngleSecond(r->rdDouble());
 }
 
 void Arc::set(const std::vector<double>& tmp)

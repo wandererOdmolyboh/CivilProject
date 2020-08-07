@@ -23,9 +23,9 @@ public:
 	virtual Rect* boundingBox() = 0; 
   virtual void DrawObject(IWDraw *w) const = 0;
   virtual bool isValid() const = 0;
-	//
-	virtual void save(IWrite &) = 0;
-	virtual void load(IRead &) = 0;
+	
+	virtual void save(IWrite *) = 0;
+	virtual void load(IRead *) = 0;
   virtual void set(const std::vector<double>& tmp) = 0;
   std::string getName() const;
 
