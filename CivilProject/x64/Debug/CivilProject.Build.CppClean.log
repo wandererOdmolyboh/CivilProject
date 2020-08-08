@@ -17,8 +17,15 @@ c:\git\civilproject\civilproject\x64\debug\circle.obj
 c:\git\civilproject\civilproject\x64\debug\baseimpl.obj
 c:\git\civilproject\civilproject\x64\debug\arcimpl.obj
 c:\git\civilproject\civilproject\x64\debug\arc.obj
-c:\git\civilproject\x64\debug\civilproject.ilk
+c:\git\civilproject\civilproject\x64\debug\polylineimpl.obj
+c:\git\civilproject\civilproject\x64\debug\polyline.obj
+c:\git\civilproject\civilproject\x64\debug\polygone.obj
+c:\git\civilproject\civilproject\x64\debug\square.obj
+c:\git\civilproject\civilproject\x64\debug\rect.obj
+c:\git\civilproject\civilproject\x64\debug\palalimpl.obj
+c:\git\civilproject\civilproject\x64\debug\aparallelogram.obj
 c:\git\civilproject\x64\debug\civilproject.exe
+c:\git\civilproject\x64\debug\civilproject.ilk
 c:\git\civilproject\x64\debug\civilproject.pdb
 c:\git\civilproject\civilproject\x64\debug\civilproject.tlog\cl.command.1.tlog
 c:\git\civilproject\civilproject\x64\debug\civilproject.tlog\cl.read.1.tlog

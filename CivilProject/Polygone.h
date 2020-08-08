@@ -1,7 +1,6 @@
 #pragma once
-#include "IBaseObject.h"
-#include "PolylineImpl.h"
-class Polygone : public IBaseObject
+#include "Polyline.h"
+class Polygone : public Polyline 
 {
 public:
   Polygone();

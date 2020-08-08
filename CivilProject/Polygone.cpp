@@ -1,6 +1,6 @@
 #include "Polygone.h"
 
-Polygone::Polygone() : IBaseObject(std::make_shared<PolylineImpl>())
+Polygone::Polygone() :  Polyline()
 {
   d_pImpl->setName("Polygone");
 }
@@ -10,7 +10,7 @@ Polygone::~Polygone()
 
 }
 
-Polygone::Polygone(const Polygone & rhs) : IBaseObject(nullptr)
+Polygone::Polygone(const Polygone & rhs) : Polyline()
 {
   d_pImpl->setName("Polygone");
   copyFrom(rhs);
@@ -32,41 +32,23 @@ Polygone & Polygone::operator=(const Polygone & rhs)
 
 Rect * Polygone::boundingBox() const
 {
-  return nullptr;//todo  Rect
+  return Polyline::boundingBox();//todo  Rect
 }
 
 bool Polygone::isValid() const
 {
-  if ((boost::dynamic_pointer_cast<PolylineImpl>(d_pImpl))
-    ->getCounter() > 2)
-    return true;
-  return false;
+  return Polyline::isValid();
 }
 
 
 void Polygone::load(IRead *r)
 {
-  if (!r->isOpen())
-    throw ReadError("Reder not not available");
-
-  size_t lenData = r->rdInt();
-  int tmp = 0;
-  auto impl = (boost::dynamic_pointer_cast<PolylineImpl>(d_pImpl));
-  impl->clearData();
-  while (tmp < lenData)
-  {
-    impl->addNewPoints(r->rdPoint2());
-  }
+  Polyline::load(r);
 }
 
 void Polygone::set(const doubleVec& tmp)
 {
-  size_t sizeData = tmp.size();
-  if (sizeData % 2 != 0 && sizeData < 4)
-  {
-    throw ErorDataFigure("Bad size vector");
-  }
-  (boost::dynamic_pointer_cast<PolylineImpl>(d_pImpl))->createDataStream(tmp);
+  Polyline::set(tmp);
 }
 
 
