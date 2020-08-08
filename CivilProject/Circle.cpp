@@ -45,14 +45,27 @@ double Circle::circumference() const
 {
   return impCirc.circumference();
 }
-
+#include"ArcImpl.h"
 void Circle::save(IWrite *w)
 {
-  impCirc.save(w, ECircle);
+  if (!w->isOpen())
+    throw ReadError("Writer not not available");
+  std::shared_ptr<ArcImpl> curImpl =
+    (boost::dynamic_pointer_cast<ArcImpl>(d_pImpl));
+  w->wrInt(ECircle);
+  Point2d t1 = curImpl->getCenter();
+  w->wrPoint2(t1);
+  double tmp = curImpl->getRadiuse();
+  w->wrDouble(tmp);
+  tmp = curImpl->getAngleFirst();
+  w->wrDouble(tmp);
+  tmp = curImpl->getAngleSecond();
+  w->wrDouble(tmp);
 }
 
 void Circle::load(IRead *r)
 {
+  impCirc.d_pImpl->getName();
   impCirc.load(r);
 }
 
