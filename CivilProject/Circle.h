@@ -22,7 +22,5 @@ private: void copyFrom(const Circle& rhs);
 
 private:
   Arc impCirc;
-
-
 };
 

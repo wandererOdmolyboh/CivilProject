@@ -112,7 +112,7 @@
       <Filter>Source Files\Figure</Filter>
     </ClCompile>
     <ClCompile Include="PolylineImpl.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\ImplEntity</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

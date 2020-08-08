@@ -35,5 +35,6 @@ protected:
   std::shared_ptr<BaseImpl> d_pImpl;
 private:
  void copyFrom(const IBaseObject& rhs);
+
 };
 

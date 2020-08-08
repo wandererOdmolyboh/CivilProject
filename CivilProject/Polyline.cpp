@@ -1,130 +1,151 @@
-//#include "Polyline.h"
-//
-//Polyline::Polyline() : IBaseObject(std::make_shared<ArcImpl>())
-//{
-//  d_pImpl->setName("Polyline");
-//}
-//
-//Polyline::~Polyline()
-//{
-//
-//}
-//
-//Polyline::Polyline(const Arc & rhs) : IBaseObject(nullptr)
-//{
-//  d_pImpl->setName("Arc");
-//  copyFrom(rhs);
-//}
-//
-//Arc & Arc::operator=(const Arc & rhs)
-//{
-//  if (this == &rhs)
-//    return *this;
-//  d_pImpl.reset();
-//  copyFrom(rhs);
-//  return *this;
-//}
-//
-//Rect * Arc::boundingBox() const
-//{
-//  return nullptr;//todo  Rect
-//}
-//
-//void Arc::DrawObject(IWDraw *w) const
-//{
-//  if (!isValid())
-//    throw ErorDataFigure("Figure is not valid cannot draw object");
-//  std::shared_ptr<ArcImpl> curImpl =
-//    (boost::dynamic_pointer_cast<ArcImpl>(d_pImpl));
-//  double angl1 = curImpl->getAngleFirst();// how to formate data?
-//  double angl2 = curImpl->getAngleSecond(); // how to formate data?
-//  w->drawText(curImpl->getName().c_str());
-//  Point2d p1(curImpl->curPointAngle(angl1));
-//  Point2d p2;
-//  for (double i = angl1 + ConstValue::StepAngle; i <= angl2; i += ConstValue::StepAngle)
-//  {
-//    p2 = (curImpl->curPointAngle(i));
-//    w->drawSegment(p1, p2);
-//    p1 = p2;
-//  }
-//  std::cout << "Length of the lines segments" << circumference() << std::endl;
-//}
-//
-//bool Arc::isValid() const
-//{
-//  if (CompareDoubleLess((boost::dynamic_pointer_cast<ArcImpl>
-//    (d_pImpl))->getRadiuse(), 0))
-//    return false;
-//  return true;
-//}
-//
-//double Arc::circumference() const
-//{
-//  return (boost::dynamic_pointer_cast<ArcImpl>(d_pImpl))->circumference();
-//}
-//
-//void Arc::save(IWrite *w)
-//{
-//  if (!w->isOpen())
-//    throw ReadError("Writer not not available");
-//  std::shared_ptr<ArcImpl> curImpl =
-//    (boost::dynamic_pointer_cast<ArcImpl>(d_pImpl));
-//  w->wrInt(EArc);
-//  Point2d t1 = curImpl->getCenter();
-//  w->wrPoint2(t1);
-//  double tmp = curImpl->getRadiuse();
-//  w->wrDouble(tmp);
-//  tmp = curImpl->getAngleFirst();
-//  w->wrDouble(tmp);
-//  tmp = curImpl->getAngleSecond();
-//  w->wrDouble(tmp);
-//}
-//
-//void Arc::load(IRead *r)
-//{
-//  if (!r->isOpen())
-//    throw ReadError("Reder not not available");
-//  std::shared_ptr<ArcImpl> curImpl =
-//    (boost::dynamic_pointer_cast<ArcImpl>(d_pImpl));
-//  curImpl->setCenter(r->rdPoint2());
-//  curImpl->setRadiuse(r->rdDouble());
-//  curImpl->setAngleFirst(r->rdDouble());
-//  curImpl->setAngleSecond(r->rdDouble());
-//}
-//
-//void Arc::set(const std::vector<double>& tmp)
-//{
-//  if (tmp.size() != 5)
-//  {
-//    throw ErorDataFigure("Bad size vector");
-//    //std::cout << "bad size vector" << std::endl; // or Exeption?
-//    //return ;
-//  }
-//  if (CompareDoubleLess(tmp[2], 0)) // todo compare
-//  {
-//    throw ErorDataFigure("Bad radius");
-//    //std::cout << "bad radius" << std::endl;
-//    //return ;
-//  }
-//  (boost::dynamic_pointer_cast<ArcImpl>(d_pImpl))->setAllValueArc(
-//    Point2d(tmp[0], tmp[1]), tmp[2], tmp[3], tmp[4]
-//  );
-//}
-//
-//void Arc::set(const Point2d & center, const double radius,
-//  const double angleFirst, const double angleSecond)
-//{
-//  if (CompareDoubleLess(radius, 0)) // todo compare
-//  {
-//    /* std::cout << "bad radiuse" << std::endl;
-//     return;*/
-//    throw ErorDataFigure("Bad radius");
-//  }
-//  (boost::dynamic_pointer_cast<ArcImpl>(d_pImpl))->setAllValueArc(
-//    center, radius, angleFirst, angleSecond);
-//}
-//
-//void Arc::copyFrom(const Arc & rhs)
-//{
-//  this->d_pImpl = rhs.d_pImpl;
-//}
+#include "Polyline.h"
+
+Polyline::Polyline() : IBaseObject(std::make_shared<PolylineImpl>())
+{
+  d_pImpl->setName("Polyline");
+}
+
+Polyline::~Polyline()
+{
+
+}
+
+Polyline::Polyline(const Polyline & rhs) : IBaseObject(nullptr)
+{
+  d_pImpl->setName("Polyline");
+  copyFrom(rhs);
+}
+
+void Polyline::copyFrom(const Polyline & rhs)
+{
+  this->d_pImpl = rhs.d_pImpl;
+}
+
+void Polyline::save(IWrite *w, int type)
+{
+  if (!w->isOpen())
+    throw ReadError("Writer not not available");
+
+  auto impl = (boost::dynamic_pointer_cast<PolylineImpl>(d_pImpl));
+  size_t lenData = impl->getCounter();
+  if (lenData < 3)
+    throw ErorDataFigure("Bad size vector");
+  Point2dVec data = impl->getData();
+  size_t curData = 0;
+  w->wrInt(type);
+  w->wrInt(lenData);
+  while (curData < lenData)
+  {
+    w->wrPoint2(data[curData++]);
+  }
+}
+
+void Polyline::DrawObjectP(IWDraw * w) const
+{
+  if (!isValid())
+    throw ErorDataFigure("Figure is not valid cannot draw object");
+  auto impl = (boost::dynamic_pointer_cast<PolylineImpl>(d_pImpl));
+  Point2dVec data = impl->getData();
+  double seg_len = 0.;
+
+  w->drawText(impl->getName().c_str());
+  size_t m_dConterPoint = impl->getCounter();
+  for (int i = 1; i < m_dConterPoint; i++)
+  {
+    seg_len += data[i - 1].dist(data[i]);
+    w->drawSegment(data[i - 1], data[i]);
+    data[i - 1].set(data[i].x(), data[i].y());
+  }
+  w->drawSegment(data[0], data[m_dConterPoint - 1]);
+  seg_len += data[0].dist(data[m_dConterPoint - 1]);
+  std::cout << "length of the lines segments " << seg_len << std::endl;
+}
+
+Polyline & Polyline::operator=(const Polyline & rhs)
+{
+  if (this == &rhs)
+    return *this;
+  d_pImpl.reset();
+  copyFrom(rhs);
+  return *this;
+}
+
+Rect * Polyline::boundingBox() const
+{
+  return nullptr;//todo  Rect
+}
+
+void Polyline::DrawObject(IWDraw *w) const
+{
+  if (!isValid())
+    throw ErorDataFigure("Figure is not valid cannot draw object");
+  auto impl = (boost::dynamic_pointer_cast<PolylineImpl>(d_pImpl));
+  Point2dVec data = impl->getData();
+  double seg_len = 0.;
+
+  w->drawText(impl->getName().c_str());
+  size_t m_dConterPoint = impl->getCounter();
+  for (int i = 1; i < m_dConterPoint; i++)
+  {
+    seg_len += data[i-1].dist(data[i]);
+    w->drawSegment(data[i - 1], data[i]);
+    data[i - 1].set(data[i].x(), data[i].y());
+  }
+  std::cout << "length of the lines segments " << seg_len << std::endl;
+}
+
+bool Polyline::isValid() const
+{
+  if ((boost::dynamic_pointer_cast<PolylineImpl>(d_pImpl))
+    ->getCounter() > 2)
+    return true;
+  return false;
+}
+
+
+void Polyline::save(IWrite *w)
+{
+  if (!w->isOpen())
+    throw ReadError("Writer not not available");
+
+  auto impl = (boost::dynamic_pointer_cast<PolylineImpl>(d_pImpl));
+  size_t lenData = impl->getCounter();
+  if (lenData < 3)
+    throw ErorDataFigure("Bad size vector");
+
+  Point2dVec data = impl->getData();
+  size_t curData = 0;
+  w->wrInt(EBrokenLine);
+  w->wrInt(lenData);
+  while (curData < lenData)
+  {
+    w->wrPoint2(data[curData++]);
+  }
+}
+
+
+void Polyline::load(IRead *r)
+{
+  if (!r->isOpen())
+    throw ReadError("Reder not not available");
+
+  size_t lenData = r->rdInt();
+  int tmp = 0;
+  auto impl = (boost::dynamic_pointer_cast<PolylineImpl>(d_pImpl));
+  impl->clearData();
+  while (tmp < lenData)
+  {
+    impl->addNewPoints(r->rdPoint2());
+  }
+}
+
+void Polyline::set(const doubleVec& tmp)
+{
+  size_t sizeData = tmp.size();
+  if (sizeData % 2 != 0 && sizeData < 4)
+  {
+    throw ErorDataFigure("Bad size vector");
+  }
+ (boost::dynamic_pointer_cast<PolylineImpl>(d_pImpl))->createDataStream(tmp); 
+}
+

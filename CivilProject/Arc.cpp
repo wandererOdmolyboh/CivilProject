@@ -129,3 +129,20 @@ void Arc::copyFrom(const Arc & rhs)
 {
   this->d_pImpl = rhs.d_pImpl;
 }
+
+void Arc::save(IWrite *w, int type)
+{
+  if (!w->isOpen())
+    throw ReadError("Writer not not available");
+  std::shared_ptr<ArcImpl> curImpl =
+    (boost::dynamic_pointer_cast<ArcImpl>(d_pImpl));
+  w->wrInt(type);
+  Point2d t1 = curImpl->getCenter();
+  w->wrPoint2(t1);
+  double tmp = curImpl->getRadiuse();
+  w->wrDouble(tmp);
+  tmp = curImpl->getAngleFirst();
+  w->wrDouble(tmp);
+  tmp = curImpl->getAngleSecond();
+  w->wrDouble(tmp);
+}

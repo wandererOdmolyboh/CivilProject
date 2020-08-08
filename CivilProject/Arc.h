@@ -1,6 +1,6 @@
 #pragma once
 #include "IBaseObject.h"
-
+class  Circle;
 class Arc : public IBaseObject
 {
 public:
@@ -20,5 +20,8 @@ public:
   virtual void set(const Point2d &center, const double radius,
     const double angleFirst, const double angleSecond);
 private: void copyFrom(const Arc& rhs);
+         void save(IWrite *, int type);
+
+         friend Circle;
 };
 

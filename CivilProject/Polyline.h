@@ -1,7 +1,8 @@
 #pragma once
 #include "IBaseObject.h"
-class Polyline :
-  public IBaseObject
+#include "PolylineImpl.h"
+class Polygone;
+class Polyline : public IBaseObject
 {
 public:
   Polyline();
@@ -13,11 +14,12 @@ public:
   virtual Rect* boundingBox() const;
   virtual void DrawObject(IWDraw *w) const;
   virtual bool isValid() const;
-  double circumference() const;
   virtual void save(IWrite *);
   virtual void load(IRead *);
-  virtual void set(const std::vector<double>& tmp);
-  virtual void set(const Point2d &center, const double radius,
-    const double angleFirst, const double angleSecond);
+  virtual void set(const doubleVec& tmp);
+ 
 private: void copyFrom(const Polyline& rhs);
+         void save(IWrite *, int Polygone);
+         void DrawObjectP(IWDraw *w) const;
+         friend Polygone;
 };

@@ -48,7 +48,7 @@ double Circle::circumference() const
 
 void Circle::save(IWrite *w)
 {
-      impCirc.save(w);
+  impCirc.save(w, ECircle);
 }
 
 void Circle::load(IRead *r)

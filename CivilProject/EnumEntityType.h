@@ -1,5 +1,9 @@
 #pragma once
-enum EntityType {
+enum EntityType
+{
   ESquare = 1, 
   ECircle = 2, 
-  EArc = 4, EPolygon = 5, EBrokenLine = 6};
+  EArc = 4,
+  EPolygon = 5,
+  EBrokenLine = 6
+};
