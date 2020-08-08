@@ -5,5 +5,6 @@ enum EntityType
   ECircle = 2, 
   EArc = 4,
   EPolygon = 5,
-  EBrokenLine = 6
+  EBrokenLine = 6,
+  ERect = 7,
 };

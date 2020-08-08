@@ -117,6 +117,18 @@
     <ClCompile Include="Polygone.cpp">
       <Filter>Source Files\Figure</Filter>
     </ClCompile>
+    <ClCompile Include="PalalImpl.cpp">
+      <Filter>Source Files\Figure</Filter>
+    </ClCompile>
+    <ClCompile Include="AParallelogram.cpp">
+      <Filter>Source Files\Figure</Filter>
+    </ClCompile>
+    <ClCompile Include="Square.cpp">
+      <Filter>Source Files\Figure</Filter>
+    </ClCompile>
+    <ClCompile Include="Rect.cpp">
+      <Filter>Source Files\Figure</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Point2d.h">
@@ -186,6 +198,18 @@
       <Filter>Header Files\Impl</Filter>
     </ClInclude>
     <ClInclude Include="Polygone.h">
+      <Filter>Header Files\Figure</Filter>
+    </ClInclude>
+    <ClInclude Include="AParallelogram.h">
+      <Filter>Header Files\Figure</Filter>
+    </ClInclude>
+    <ClInclude Include="PalalImpl.h">
+      <Filter>Header Files\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="Square.h">
+      <Filter>Header Files\Figure</Filter>
+    </ClInclude>
+    <ClInclude Include="Rect.h">
       <Filter>Header Files\Figure</Filter>
     </ClInclude>
   </ItemGroup>

@@ -142,6 +142,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AParallelogram.cpp" />
     <ClCompile Include="Arc.cpp" />
     <ClCompile Include="ArcImpl.cpp" />
     <ClCompile Include="BaseImpl.cpp" />
@@ -151,18 +152,22 @@
     <ClCompile Include="Exceptions.cpp" />
     <ClCompile Include="IWDraw.cpp" />
     <ClCompile Include="operation_w_double.cpp" />
+    <ClCompile Include="PalalImpl.cpp" />
     <ClCompile Include="Point2d.cpp" />
     <ClCompile Include="Polygone.cpp" />
     <ClCompile Include="Polyline.cpp" />
     <ClCompile Include="PolylineImpl.cpp" />
     <ClCompile Include="ReadC.cpp" />
     <ClCompile Include="ReadF.cpp" />
+    <ClCompile Include="Rect.cpp" />
+    <ClCompile Include="Square.cpp" />
     <ClCompile Include="WDrawCons.cpp" />
     <ClCompile Include="WDrawOGL.cpp" />
     <ClCompile Include="WriteC.cpp" />
     <ClCompile Include="WriteF.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AParallelogram.h" />
     <ClInclude Include="ArcImpl.h" />
     <ClInclude Include="Arc.h" />
     <ClInclude Include="BaseImpl.h" />
@@ -176,12 +181,15 @@
     <ClInclude Include="IWDraw.h" />
     <ClInclude Include="IWrite.h" />
     <ClInclude Include="operation_w_double.h" />
+    <ClInclude Include="PalalImpl.h" />
     <ClInclude Include="Point2d.h" />
     <ClInclude Include="Polygone.h" />
     <ClInclude Include="Polyline.h" />
     <ClInclude Include="PolylineImpl.h" />
     <ClInclude Include="ReadC.h" />
     <ClInclude Include="ReadF.h" />
+    <ClInclude Include="Rect.h" />
+    <ClInclude Include="Square.h" />
     <ClInclude Include="WDrawCons.h" />
     <ClInclude Include="WDrawOGL.h" />
     <ClInclude Include="WriteC.h" />

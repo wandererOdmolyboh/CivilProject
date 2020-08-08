@@ -1,13 +1,29 @@
-﻿  Arc.cpp
+﻿  AParallelogram.cpp
+  Arc.cpp
   ArcImpl.cpp
   BaseImpl.cpp
   Circle.cpp
   IBaseObject.cpp
   CivilProject.cpp
+  IWDraw.cpp
+  PalalImpl.cpp
+  Point2d.cpp
   Polygone.cpp
 c:\git\civilproject\civilproject\polygone.cpp(86): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
   Polyline.cpp
 c:\git\civilproject\civilproject\polyline.cpp(79): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
   PolylineImpl.cpp
+  ReadC.cpp
+  ReadF.cpp
+  Rect.cpp
+  Square.cpp
+  WDrawCons.cpp
+  WDrawOGL.cpp
+c:\git\civilproject\civilproject\wdrawogl.cpp(11): warning C4100: 'p2': unreferenced formal parameter
+c:\git\civilproject\civilproject\wdrawogl.cpp(11): warning C4100: 'p1': unreferenced formal parameter
+  WriteC.cpp
+  Generating Code...
+  Compiling...
+  WriteF.cpp
   Generating Code...
   CivilProject.vcxproj -> C:\git\CivilProject\x64\Debug\CivilProject.exe
