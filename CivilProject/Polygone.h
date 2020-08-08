@@ -1,6 +1,6 @@
 #pragma once
-#include "Polyline.h"
-
+#include "IBaseObject.h"
+#include "PolylineImpl.h"
 class Polygone : public IBaseObject
 {
 public:
@@ -18,8 +18,5 @@ public:
   virtual void set(const doubleVec& tmp);
 
 private: void copyFrom(const Polygone& rhs);
-
-private:
-  Polyline impPolygone;
 };
 

@@ -2,8 +2,10 @@
   ArcImpl.cpp
   BaseImpl.cpp
   Circle.cpp
-  CivilProject.cpp
   IBaseObject.cpp
+  CivilProject.cpp
+  Polygone.cpp
+c:\git\civilproject\civilproject\polygone.cpp(86): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
   Polyline.cpp
 c:\git\civilproject\civilproject\polyline.cpp(79): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
   PolylineImpl.cpp

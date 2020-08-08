@@ -1,7 +1,7 @@
 #pragma once
 #include "IBaseObject.h"
 #include "PolylineImpl.h"
-class Polygone;
+
 class Polyline : public IBaseObject
 {
 public:
@@ -19,7 +19,4 @@ public:
   virtual void set(const doubleVec& tmp);
  
 private: void copyFrom(const Polyline& rhs);
-         void save(IWrite *, int Polygone);
-         void DrawObjectP(IWDraw *w) const;
-         friend Polygone;
 };

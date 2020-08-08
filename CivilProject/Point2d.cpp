@@ -40,7 +40,7 @@ void Point2d::setY(double yy)
 	m_dY = yy;
 }
 
-double Point2d::dist(Point2d& P) const
+double Point2d::dist(const Point2d& P) const
 {
 	return sqrt(pow((m_dX - P.x()), 2.0) + pow((m_dY - P.y()), 2.0));
 }

@@ -14,7 +14,7 @@ public:
 	void set(double xx, double yy);
 	void setX(double xx);
 	void setY(double yy);
-	double dist(Point2d& P) const;
+	double dist(const Point2d& P) const;
 private:
 	double m_dX;
 	double m_dY;

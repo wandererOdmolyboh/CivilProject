@@ -152,6 +152,7 @@
     <ClCompile Include="IWDraw.cpp" />
     <ClCompile Include="operation_w_double.cpp" />
     <ClCompile Include="Point2d.cpp" />
+    <ClCompile Include="Polygone.cpp" />
     <ClCompile Include="Polyline.cpp" />
     <ClCompile Include="PolylineImpl.cpp" />
     <ClCompile Include="ReadC.cpp" />
@@ -176,6 +177,7 @@
     <ClInclude Include="IWrite.h" />
     <ClInclude Include="operation_w_double.h" />
     <ClInclude Include="Point2d.h" />
+    <ClInclude Include="Polygone.h" />
     <ClInclude Include="Polyline.h" />
     <ClInclude Include="PolylineImpl.h" />
     <ClInclude Include="ReadC.h" />
