@@ -1,5 +1,9 @@
 #include "Rect.h"
 
+Rect::Rect() : AParallelogram()
+{
+}
+
 bool Rect::isValid() const
 {
   std::shared_ptr<PalalImpl> curImpl =

@@ -67,11 +67,11 @@ double ArcImpl::getAngleSecond() const
 
 double ArcImpl::circumference() const
 {
-  return (abs(((m_dAngle2 - m_dAngle1) * ConstValue::Pi / 180) * m_dRadius));
+  return (abs(((m_dAngle2 - m_dAngle1) * ConstValue::Pi / ConstValue::PiDegree) * m_dRadius));
 }
 
 Point2d ArcImpl::curPointAngle(double curAngle)
 {
-  return Point2d(m_dCenter.x() + m_dRadius * cos(curAngle * ConstValue::Pi / 180),
-    m_dCenter.y() + m_dRadius * sin(curAngle * ConstValue::Pi / 180));
+  return Point2d(m_dCenter.x() + m_dRadius * cos(curAngle * ConstValue::Pi / ConstValue::PiDegree),
+    m_dCenter.y() + m_dRadius * sin(curAngle * ConstValue::Pi / ConstValue::PiDegree));
 }

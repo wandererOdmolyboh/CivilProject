@@ -1,4 +1,5 @@
 #include "Square.h"
+#include"Rect.h"
 
 bool Square::isValid() const
 {
@@ -31,5 +32,7 @@ void Square::save(IWrite *w)
 
 Rect * Square::boundingBox() const
 {
-  return nullptr;
+  //Rect *rect = new Rect();
+  //rect->set();
+  return (nullptr);
 }

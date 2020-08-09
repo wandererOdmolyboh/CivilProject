@@ -59,7 +59,7 @@ namespace UnitTest
 
         Assert::AreEqual(TestDataArc::Center.x(), p->getCenter().x());
         Assert::AreEqual(TestDataArc::Center.y(), p->getCenter().y());
-        //delete p;
+        delete p;
       }
       catch (std::bad_alloc&t)
       {

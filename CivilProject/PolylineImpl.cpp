@@ -9,7 +9,7 @@ PolylineImpl::PolylineImpl()
   m_dConterPoint = 0;
 }
 
-Point2dVec PolylineImpl::getData()
+std::vector<Point2d> PolylineImpl::getData()
 {
   return m_Points;
 }
@@ -25,7 +25,7 @@ void PolylineImpl::addNewPoints(const Point2d &p)
   m_Points.push_back(p);
 }
 
-void PolylineImpl::createDataStream(doubleVec data)
+void PolylineImpl::createDataStream(std::vector<double> data)
 {
   clearData();
   const size_t stepforData = 2;

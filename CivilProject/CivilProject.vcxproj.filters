@@ -63,12 +63,6 @@
     <ClCompile Include="CivilProject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Exceptions.cpp">
-      <Filter>Source Files\Base</Filter>
-    </ClCompile>
-    <ClCompile Include="IWDraw.cpp">
-      <Filter>Source Files\Base</Filter>
-    </ClCompile>
     <ClCompile Include="Point2d.cpp">
       <Filter>Source Files\Base</Filter>
     </ClCompile>
@@ -117,9 +111,6 @@
     <ClCompile Include="Polygone.cpp">
       <Filter>Source Files\Figure</Filter>
     </ClCompile>
-    <ClCompile Include="PalalImpl.cpp">
-      <Filter>Source Files\Figure</Filter>
-    </ClCompile>
     <ClCompile Include="AParallelogram.cpp">
       <Filter>Source Files\Figure</Filter>
     </ClCompile>
@@ -128,6 +119,15 @@
     </ClCompile>
     <ClCompile Include="Rect.cpp">
       <Filter>Source Files\Figure</Filter>
+    </ClCompile>
+    <ClCompile Include="IWDraw.cpp">
+      <Filter>Source Files\Draw</Filter>
+    </ClCompile>
+    <ClCompile Include="FindBoundigBox.cpp">
+      <Filter>Source Files\NewFilter1</Filter>
+    </ClCompile>
+    <ClCompile Include="PalalImpl.cpp">
+      <Filter>Source Files\ImplEntity</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -138,9 +138,6 @@
       <Filter>Header Files\Base</Filter>
     </ClInclude>
     <ClInclude Include="Full_libs.h">
-      <Filter>Header Files\Base</Filter>
-    </ClInclude>
-    <ClInclude Include="IWDraw.h">
       <Filter>Header Files\Base</Filter>
     </ClInclude>
     <ClInclude Include="WDrawCons.h">
@@ -188,9 +185,6 @@
     <ClInclude Include="IRead.h">
       <Filter>Header Files\ReadWrite\InterFace</Filter>
     </ClInclude>
-    <ClInclude Include="EnumEntityType.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Polyline.h">
       <Filter>Header Files\Figure</Filter>
     </ClInclude>
@@ -211,6 +205,18 @@
     </ClInclude>
     <ClInclude Include="Rect.h">
       <Filter>Header Files\Figure</Filter>
+    </ClInclude>
+    <ClInclude Include="IWDraw.h">
+      <Filter>Header Files\Draw</Filter>
+    </ClInclude>
+    <ClInclude Include="FigureFactory.h">
+      <Filter>Header Files\FigureFabric</Filter>
+    </ClInclude>
+    <ClInclude Include="EnumEntityType.h">
+      <Filter>Header Files\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="FindBoundigBox.h">
+      <Filter>Header Files\NewFilter1</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

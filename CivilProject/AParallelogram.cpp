@@ -1,5 +1,6 @@
 #include "AParallelogram.h"
-
+#include"Rect.h"
+#include "FindBoundigBox.h"
 AParallelogram::AParallelogram() : 
   IBaseObject(std::make_shared<PalalImpl>())
 {
@@ -50,10 +51,6 @@ AParallelogram & AParallelogram::operator=(const AParallelogram & rhs)
   return *this;
 }
 
-Rect * AParallelogram::boundingBox() const
-{
-  return nullptr;//todo  Rect
-}
 
 void AParallelogram::DrawObject(IWDraw *w) const
 {
@@ -93,7 +90,7 @@ void AParallelogram::save(IWrite *w)
 void AParallelogram::load(IRead *r)
 {
   if (!r->isOpen())
-    throw ReadError("Reder not not available");
+    throw ReadError("Reder not available");
   auto curImpl =
     (boost::dynamic_pointer_cast<PalalImpl>(d_pImpl));
   curImpl->set(
@@ -115,3 +112,8 @@ void AParallelogram::set(const doubleVec& tmp)
     throw ErorDataFigure("Bad size vector");
   }
 }
+
+//void AParallelogram::set(const Point2d & P1, const Point2d & P2, const Point2d & P3, const Point2d & P4)
+//{
+//  (boost::dynamic_pointer_cast<PalalImpl>(d_pImpl))->set(P1, P2, P3, P4);
+//}

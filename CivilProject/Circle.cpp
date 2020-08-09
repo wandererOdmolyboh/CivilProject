@@ -1,4 +1,7 @@
 #include "Circle.h"
+#include"ArcImpl.h"
+#include"Rect.h"
+#include "FindBoundigBox.h"
 Circle::Circle() : IBaseObject(std::make_shared<BaseImpl>())
 {
   d_pImpl->setName("Circle");
@@ -23,7 +26,18 @@ Circle & Circle::operator=(const Circle & rhs)
 
 Rect * Circle::boundingBox() const
 {
-  return nullptr;//todo  Rect
+  doubleVec bound;
+
+  std::shared_ptr<ArcImpl> curImpl =
+    (boost::dynamic_pointer_cast<ArcImpl>(d_pImpl));
+  bound.push_back(curImpl->getCenter().x() + curImpl->getRadiuse());
+  bound.push_back(curImpl->getCenter().y() + curImpl->getRadiuse());
+  bound.push_back(curImpl->getCenter().x() - curImpl->getRadiuse());
+  bound.push_back(curImpl->getCenter().y() - curImpl->getRadiuse());
+  Rect *rect = new Rect();
+  rect->set(bound);
+  return (rect);
+  return nullptr;
 }
 
 void Circle::DrawObject(IWDraw *w) const
@@ -45,7 +59,7 @@ double Circle::circumference() const
 {
   return impCirc.circumference();
 }
-#include"ArcImpl.h"
+
 void Circle::save(IWrite *w)
 {
   if (!w->isOpen())
@@ -65,7 +79,7 @@ void Circle::save(IWrite *w)
 
 void Circle::load(IRead *r)
 {
-  impCirc.d_pImpl->getName();
+  //impCirc.d_pImpl->getName();
   impCirc.load(r);
 }
 

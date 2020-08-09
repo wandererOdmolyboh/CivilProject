@@ -1,15 +1,16 @@
 #pragma once
 #include <string>
 #include <vector>
-#include "BaseImpl.h"
 #include <memory>
 #include <boost/pointer_cast.hpp>
 #include <boost/shared_ptr.hpp>
+#include "BaseImpl.h"
 #include "IWDraw.h"
 #include "IWrite.h"
 #include "IRead.h"
 
 class Rect;
+
 class IBaseObject
 {
 protected:
@@ -27,7 +28,7 @@ public:
 	
 	virtual void save(IWrite *) = 0;
 	virtual void load(IRead *) = 0;
-  virtual void set(const std::vector<double>& tmp) = 0;
+  virtual void set(const doubleVec& tmp) = 0;
   std::string getName() const;
 
 protected:

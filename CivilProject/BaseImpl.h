@@ -4,7 +4,7 @@
 #include "operation_w_double.h"
 #include "EnumEntityType.h"
 #include <vector>
-typedef std::vector <double> doubleVec;
+typedef  std::vector<double> doubleVec;
 typedef std::vector<Point2d> Point2dVec;
 
 class BaseImpl

@@ -1,5 +1,6 @@
 #pragma once
 #include "IBaseObject.h"
+
 class  Circle;
 class Arc : public IBaseObject
 {

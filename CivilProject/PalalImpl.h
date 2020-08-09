@@ -5,7 +5,7 @@ class PalalImpl : public BaseImpl
 public:
   PalalImpl();
   ~PalalImpl();
-  void set(const Point2d &, const Point2d &);
+  void set(const Point2d &, const Point2d &); // setFo Tops
   void set(const Point2d &, const Point2d &,
     const Point2d &, const Point2d &);
 

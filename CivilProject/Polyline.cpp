@@ -1,5 +1,6 @@
 #include "Polyline.h"
-
+#include"Rect.h"
+#include "FindBoundigBox.h"
 Polyline::Polyline() : IBaseObject(std::make_shared<PolylineImpl>())
 {
   d_pImpl->setName("Polyline");
@@ -32,7 +33,11 @@ Polyline & Polyline::operator=(const Polyline & rhs)
 
 Rect * Polyline::boundingBox() const
 {
-  return nullptr;//todo  Rect
+  Rect *rect = new Rect();
+  std::vector<double> rez;
+  find_Rect((boost::dynamic_pointer_cast<PolylineImpl>(d_pImpl))->getData(), rez);
+  rect->set(rez);
+  return (rect);
 }
 
 void Polyline::DrawObject(IWDraw *w) const
@@ -76,7 +81,7 @@ void Polyline::save(IWrite *w)
   Point2dVec data = impl->getData();
   size_t curData = 0;
   w->wrInt(EBrokenLine);
-  w->wrInt(lenData);
+  w->wrInt((int)lenData);
   while (curData < lenData)
   {
     w->wrPoint2(data[curData++]);

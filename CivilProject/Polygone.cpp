@@ -1,5 +1,6 @@
 #include "Polygone.h"
-
+#include"Rect.h"
+#include "FindBoundigBox.h"
 Polygone::Polygone() :  Polyline()
 {
   d_pImpl->setName("Polygone");
@@ -32,7 +33,7 @@ Polygone & Polygone::operator=(const Polygone & rhs)
 
 Rect * Polygone::boundingBox() const
 {
-  return Polyline::boundingBox();//todo  Rect
+  return Polyline::boundingBox();
 }
 
 bool Polygone::isValid() const
@@ -65,7 +66,7 @@ void Polygone::save(IWrite *w)
   Point2dVec data = impl->getData();
   size_t curData = 0;
   w->wrInt(EPolygon);
-  w->wrInt(lenData);
+  w->wrInt((int)lenData);
   while (curData < lenData)
   {
     w->wrPoint2(data[curData++]);

@@ -1,6 +1,7 @@
 #include "Arc.h"
 #include "ArcImpl.h"
-
+#include"Rect.h"
+#include "FindBoundigBox.h"
 Arc::Arc(): IBaseObject(std::make_shared<ArcImpl>())
 {
   d_pImpl->setName("Arc");
@@ -25,10 +26,25 @@ Arc & Arc::operator=(const Arc & rhs)
   copyFrom(rhs);
   return *this;
 }
-
 Rect * Arc::boundingBox() const
 {
-  return nullptr;//todo  Rect
+  if (!isValid())
+    return nullptr;
+  std::shared_ptr<ArcImpl> curImpl =
+    (boost::dynamic_pointer_cast<ArcImpl>(d_pImpl));
+  double angl_1 = curImpl->getAngleFirst();
+  double angl_2 = curImpl->getAngleSecond();
+  Point2dVec described;
+  for (double i = angl_1; i <= angl_2; i += ConstValue::StepAngle)
+  {
+    described.push_back(curImpl->curPointAngle(i));
+  }
+  Rect *rect = new Rect();
+  doubleVec rez;
+  find_Rect(described, rez);
+  rect->set(rez);
+  return (rect);
+  return nullptr;
 }
 
 void Arc::DrawObject(IWDraw *w) const
