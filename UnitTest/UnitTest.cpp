@@ -209,34 +209,6 @@ namespace ImplTest
         Assert::Fail();
       }
     };
-
-    //TestCatch
-    //TEST_METHOD(TestCatch)
-    //{
-    //  try
-    //  {
-    //    std::shared_ptr<Arc> p = std::make_shared<Arc>();
-    //    p->set(TestDataArcInc::Center, TestDataArcInc::Radiuse, TestDataArcInc::AngleF, TestDataArcInc::AngleS);
-    //    double a_d = abs(TestDataArc::AngleF - TestDataArc::AngleS);
-    //    double L1 = a_d * ConstValue::Pi / ConstValue::PiDegree * TestDataArc::Radiuse;
-    //    double L2 = a_d / ConstValue::Pi2Degree * 2 * ConstValue::Pi * TestDataArc::Radiuse;
-    //    if (!CompareDoubleEquall(p->circumference(), L1))
-    //      Assert::Fail();
-    //    if (!CompareDoubleEquall(p->circumference(), L2))
-    //      Assert::Fail();
-    //    Assert::AreEqual(p->circumference(), L1);
-    //    Assert::AreEqual(p->circumference(), L2);
-
-    //  }
-    //  catch (std::bad_weak_ptr&)
-    //  {
-    //    Assert::Fail();
-    //  }
-    //  catch (ErorDataFigure&)
-    //  {
-    //    Assert::Fail();
-    //  }
-    //};
   };
 
   //TEST_CLASS(UCopyConstruct)

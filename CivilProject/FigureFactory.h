@@ -4,7 +4,7 @@
 class FigureFactory
 {
 public:
-  virtual IBaseObject* createFigure() = 0;
+  virtual  std::shared_ptr<IBaseObject> createFigure() = 0;
   ~FigureFactory() {}
 };
 
@@ -12,16 +12,19 @@ public:
 class ArcFactory : public FigureFactory
 {
 public:
-  IBaseObject* createFigure() {
-    return new Arc;
+  std::shared_ptr<IBaseObject> createFigure()
+  {
+    std::shared_ptr<IBaseObject> figure = std::make_shared<Arc>();
+    return figure;
   }
 };
 
 class CircleFactory : public FigureFactory
 {
 public:
-  IBaseObject* createFigure() {
-    return new Circle;
+  std::shared_ptr<IBaseObject> createFigure() {
+    std::shared_ptr<IBaseObject> figure = std::make_shared<Circle>();
+    return figure;
   }
 };
 
@@ -29,31 +32,35 @@ public:
 class PolylineFactory : public FigureFactory
 {
 public:
-  IBaseObject* createFigure() {
-    return new Polyline;
+  std::shared_ptr<IBaseObject> createFigure() {
+    std::shared_ptr<IBaseObject> figure = std::make_shared<Polyline>();
+    return figure;
   }
 };
 
 class PolygoneFactory : public FigureFactory
 {
 public:
-  IBaseObject* createFigure() {
-    return new Polygone;
+  std::shared_ptr<IBaseObject> createFigure() {
+    std::shared_ptr<IBaseObject> figure = std::make_shared<Polygone>();
+    return figure;
   }
 };
 
 class RectFactory : public FigureFactory
 {
 public:
-  IBaseObject* createFigure() {
-    return new Rect;
+  std::shared_ptr<IBaseObject> createFigure() {
+    std::shared_ptr<IBaseObject> figure = std::make_shared<Rect>();
+    return figure;
   }
 };
 
 class SquareFactory : public FigureFactory
 {
 public:
-  IBaseObject* createFigure() {
-    return new Square;
+  std::shared_ptr<IBaseObject> createFigure() {
+    std::shared_ptr<IBaseObject> figure = std::make_shared<Square>();
+    return figure;
   }
 };

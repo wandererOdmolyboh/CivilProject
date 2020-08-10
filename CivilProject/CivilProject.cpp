@@ -6,9 +6,9 @@
 #include "FigureFactory.h"
 
 
-IBaseObject* CreteFindFigure(int type)
+std::shared_ptr<IBaseObject> CreteFindFigure(int type)
 {
-  IBaseObject* retFigure = nullptr;
+  std::shared_ptr<IBaseObject> retFigure = std::make_shared<Arc>();
 
   if (type == EArc)
   {

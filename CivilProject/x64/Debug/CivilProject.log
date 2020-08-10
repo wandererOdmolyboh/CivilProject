@@ -1,28 +1,2 @@
-﻿  AParallelogram.cpp
-  Arc.cpp
-  ArcImpl.cpp
-  BaseImpl.cpp
-  Circle.cpp
-  FindBoundigBox.cpp
-  IBaseObject.cpp
-  CivilProject.cpp
-  operation_w_double.cpp
-  PalalImpl.cpp
-  Point2d.cpp
-  Polygone.cpp
-  Polyline.cpp
-  PolylineImpl.cpp
-  ReadC.cpp
-  ReadF.cpp
-  Rect.cpp
-  Square.cpp
-  WDrawCons.cpp
-  WDrawOGL.cpp
-c:\git\civilproject\civilproject\wdrawogl.cpp(11): warning C4100: 'p2': unreferenced formal parameter
-c:\git\civilproject\civilproject\wdrawogl.cpp(11): warning C4100: 'p1': unreferenced formal parameter
-  Generating Code...
-  Compiling...
-  WriteC.cpp
-  WriteF.cpp
-  Generating Code...
+﻿  CivilProject.cpp
   CivilProject.vcxproj -> C:\git\CivilProject\x64\Debug\CivilProject.exe
