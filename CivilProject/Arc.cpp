@@ -12,7 +12,7 @@ Arc::~Arc()
 
 }
 
-Arc::Arc(const Arc & rhs) : IBaseObject(nullptr)
+Arc::Arc(const Arc & rhs) : IBaseObject(std::make_shared<ArcImpl>())
 {
   d_pImpl->setName("Arc");
   copyFrom(rhs);
@@ -26,6 +26,7 @@ Arc & Arc::operator=(const Arc & rhs)
   copyFrom(rhs);
   return *this;
 }
+
 Rect * Arc::boundingBox() const
 {
   if (!isValid())
@@ -133,8 +134,6 @@ void Arc::set(const Point2d & center, const double radius,
 {
   if (CompareDoubleLess(radius, 0)) // todo compare
   {
-   /* std::cout << "bad radiuse" << std::endl;
-    return;*/
     throw ErorDataFigure("Bad radius");
   }
   (boost::dynamic_pointer_cast<ArcImpl>(d_pImpl))->setAllValueArc(

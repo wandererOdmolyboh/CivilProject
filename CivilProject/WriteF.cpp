@@ -30,7 +30,7 @@ void WriteF::wrPoint2(Point2d &tmp)
     throw ReadError("File not open");
   
   m_ofoutfile.write(reinterpret_cast<char *>(&tmp), sizeof(Point2d));
-  //m_ofoutfile.write(&tmp.x, sizeof(tmp.x));
+  //m_ofoutfile.write(&tmp.x, sizeof(tmp.x)); todo const
   //m_ofoutfile.write(tmp.y, sizeof(tmp.y));
 }
 

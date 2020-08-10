@@ -29,10 +29,3 @@ void Square::save(IWrite *w)
   w->wrInt(ESquare);
   AParallelogram::save(w);
 }
-
-Rect * Square::boundingBox() const
-{
-  //Rect *rect = new Rect();
-  //rect->set();
-  return (nullptr);
-}

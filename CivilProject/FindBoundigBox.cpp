@@ -3,10 +3,10 @@
 std::vector<double> find_point_Rect(const Point2d& point0, 
   const Point2d& point1, double h, const int side);
 
-void find_dist_point(const std::vector<Point2d>& p, const std::vector<int> &vector_index,
+void find_dist_point(const std::vector<Point2d>& p, const std::vector<size_t> &vector_index,
   std::vector<double> &vector_value, const Point2d &p1, const Point2d &p2);
 
-void find_point_rect(std::vector <double> &rez, const std::vector<int> &vector_index,
+void find_point_rect(std::vector <double> &rez, const std::vector<size_t> &vector_index,
   std::vector<double> &vector_value, const Point2d &p1,
   const Point2d &p2, const int64_t id, const int flag);
 
@@ -14,8 +14,8 @@ void find_Rect(const std::vector<Point2d>& p, std::vector <double> &rez)
 {
   Point2d p1(min(p));
   Point2d p2(max(p));
-  std::vector<int> left_vector_index;
-  std::vector<int> right_vector_index;
+  std::vector<size_t> left_vector_index;
+  std::vector<size_t> right_vector_index;
   std::vector<double> left_vector_value;
   std::vector<double> right_vector_value;
 
@@ -73,7 +73,7 @@ Point2d max(const std::vector<Point2d>& p)
 
 
 
-void find_dist_point(const std::vector<Point2d>& p, const std::vector<int> &vector_index,
+void find_dist_point(const std::vector<Point2d>& p, const std::vector<size_t> &vector_index,
   std::vector<double> &vector_value,const Point2d &p1, const Point2d &p2)
 {
   for (size_t i = 0; i < vector_index.size(); i++)
@@ -95,7 +95,7 @@ void find_dist_point(const std::vector<Point2d>& p, const std::vector<int> &vect
   }
 }
 
-void find_point_rect(std::vector <double> &rez, const std::vector<int> &vector_index,
+void find_point_rect(std::vector <double> &rez, const std::vector<size_t> &vector_index,
    std::vector<double> &vector_value, const Point2d &p1, 
   const Point2d &p2, const int64_t id,const int flag)
 {

@@ -1,8 +1,8 @@
 #include "operation_w_double.h"
 
-bool CompareDoubleMore(double a, double b)
+bool CompareDoubleGreater(double a, double b)
 {
-  double rez = abs(a - b);
+  double rez = a - b;
   if (rez > ConstValue::Tolerance)
     return true;
   return false;

@@ -16,7 +16,7 @@ class IBaseObject
 protected:
   IBaseObject(std::shared_ptr<BaseImpl> impl);
 public:
-	IBaseObject();
+	//IBaseObject();
 	virtual ~IBaseObject();
 	IBaseObject(const IBaseObject& obj);
 	IBaseObject& operator=(const IBaseObject& rhs);

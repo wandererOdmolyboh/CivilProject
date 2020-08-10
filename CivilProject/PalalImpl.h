@@ -4,9 +4,9 @@ class PalalImpl : public BaseImpl
 {
 public:
   PalalImpl();
-  ~PalalImpl();
-  void set(const Point2d &, const Point2d &); // setFo Tops
-  void set(const Point2d &, const Point2d &,
+  ~PalalImpl(); 
+  void setforDiagonal(const Point2d &, const Point2d &); // setFo Tops
+  void setforTops(const Point2d &, const Point2d &,
     const Point2d &, const Point2d &);
 
   Point2d getP1() const;

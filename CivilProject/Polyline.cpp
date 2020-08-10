@@ -11,7 +11,7 @@ Polyline::~Polyline()
 
 }
 
-Polyline::Polyline(const Polyline & rhs) : IBaseObject(nullptr)
+Polyline::Polyline(const Polyline & rhs) : IBaseObject(std::make_shared<PolylineImpl>())
 {
   d_pImpl->setName("Polyline");
   copyFrom(rhs);

@@ -120,9 +120,6 @@
     <ClCompile Include="Rect.cpp">
       <Filter>Source Files\Figure</Filter>
     </ClCompile>
-    <ClCompile Include="IWDraw.cpp">
-      <Filter>Source Files\Draw</Filter>
-    </ClCompile>
     <ClCompile Include="FindBoundigBox.cpp">
       <Filter>Source Files\NewFilter1</Filter>
     </ClCompile>

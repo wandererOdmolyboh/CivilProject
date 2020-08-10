@@ -12,7 +12,7 @@ PalalImpl::~PalalImpl()
 {
 }
 
-void PalalImpl::set(const Point2d &P1, const Point2d &P2)
+void PalalImpl::setforDiagonal(const Point2d &P1, const Point2d &P2)
 {
   m_P1 = P1;
   m_P2 = Point2d(P1.x(), P2.y());
@@ -20,7 +20,7 @@ void PalalImpl::set(const Point2d &P1, const Point2d &P2)
   m_P4 = Point2d(P2.x(), P1.y());
 }
 
-void PalalImpl::set(const Point2d &P1, const Point2d &P2,
+void PalalImpl::setforTops(const Point2d &P1, const Point2d &P2,
   const Point2d &P3, const Point2d &P4)
 {
   m_P1 = P1;

@@ -1,10 +1,10 @@
 #include "IBaseObject.h"
 
-IBaseObject::IBaseObject()
-{
-  d_pImpl = nullptr;
-  //
-}
+//IBaseObject::IBaseObject()
+//{
+//  d_pImpl = nullptr;
+//  //
+//}
 
 IBaseObject::IBaseObject(std::shared_ptr<BaseImpl> implnew)
 {

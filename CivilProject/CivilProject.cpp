@@ -6,57 +6,50 @@
 #include "FigureFactory.h"
 
 
-//IBaseObject* CreteFindFigure(int type)
-//{
-//  IBaseObject* retFigure = nullptr;
-//
-//  if (type == EArc)
-//  {
-//    ArcFactory *ArcF = new ArcFactory();
-//    retFigure = ArcF->createFigure();
-//    delete ArcF;
-//  }
-//  else if (type == ECircle)
-//  {
-//    CircleFactory *CircF = new CircleFactory();
-//    retFigure = CircF->createFigure();
-//    delete CircF;
-//  }
-//  //else if (type == ERect)
-//  //{
-//  //  RectFactory *RectF = new RectFactory();
-//  //  retFigure = RectF->createFigure();
-//  //  delete RectF;
-//  //}
-//  //else if (type == ESquare)
-//  //{
-//  //  SquareFactory *SquarF = new SquareFactory();
-//  //  retFigure = SquarF->createFigure();
-//  //  delete SquarF;
-//
-//  //}
-//  else if (type == EBrokenLine)
-//  {
-//    PolylineFactory *PolynF = new PolylineFactory();
-//    retFigure = PolynF->createFigure();
-//    delete PolynF;
-//  }
-//  else if (type == EPolygon)
-//  {
-//    PolygoneFactory *PolygF = new PolygoneFactory();
-//    retFigure = PolygF->createFigure();
-//    delete PolygF;
-//  }
-//  return (retFigure);
-//}
+IBaseObject* CreteFindFigure(int type)
+{
+  IBaseObject* retFigure = nullptr;
 
-//void foo()
-//{
-//  for (int i = 0; i < 100000; ++i)
-//  {
-//    double d = i * 2 % 10;
-//  }
-//}
+  if (type == EArc)
+  {
+    ArcFactory *ArcF = new ArcFactory();
+    retFigure = ArcF->createFigure();
+    delete ArcF;
+  }
+  else if (type == ECircle)
+  {
+    CircleFactory *CircF = new CircleFactory();
+    retFigure = CircF->createFigure();
+    delete CircF;
+  }
+  else if (type == ERect)
+  {
+    RectFactory *RectF = new RectFactory();
+    retFigure = RectF->createFigure();
+    delete RectF;
+  }
+  else if (type == ESquare)
+  {
+    SquareFactory *SquarF = new SquareFactory();
+    retFigure = SquarF->createFigure();
+    delete SquarF;
+
+  }
+  else if (type == EBrokenLine)
+  {
+    PolylineFactory *PolynF = new PolylineFactory();
+    retFigure = PolynF->createFigure();
+    delete PolynF;
+  }
+  else if (type == EPolygon)
+  {
+    PolygoneFactory *PolygF = new PolygoneFactory();
+    retFigure = PolygF->createFigure();
+    delete PolygF;
+  }
+  return (retFigure);
+}
+
 
 int main()
 {

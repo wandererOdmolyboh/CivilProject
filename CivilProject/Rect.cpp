@@ -29,8 +29,3 @@ void Rect::save(IWrite *w)
   w->wrInt(ERect);
   AParallelogram::save(w);
 }
-
-Rect * Rect::boundingBox() const
-{
-  return nullptr;
-}

@@ -12,7 +12,7 @@ AParallelogram::~AParallelogram()
 }
 
 AParallelogram::AParallelogram(const AParallelogram & rhs) : 
-  IBaseObject(nullptr)
+  IBaseObject(std::make_shared<PalalImpl>())
 {
   copyFrom(rhs);
 }
@@ -25,16 +25,7 @@ void AParallelogram::copyFrom(const AParallelogram & rhs)
 void AParallelogram::setforTops(const doubleVec & tmp)
 {
   (boost::dynamic_pointer_cast<PalalImpl>(d_pImpl))->
-    set(
-      Point2d(tmp.at(0), tmp.at(1)),
-      Point2d(tmp.at(2), tmp.at(3))
-    );
-}
-
-void AParallelogram::setforDiagonal(const doubleVec & tmp)
-{
-  (boost::dynamic_pointer_cast<PalalImpl>(d_pImpl))->
-    set(
+    setforTops(
       Point2d(tmp.at(0), tmp.at(1)),
       Point2d(tmp.at(2), tmp.at(3)),
       Point2d(tmp.at(4), tmp.at(5)),
@@ -42,6 +33,14 @@ void AParallelogram::setforDiagonal(const doubleVec & tmp)
     );
 }
 
+void AParallelogram::setforDiagonal(const doubleVec & tmp)
+{
+  (boost::dynamic_pointer_cast<PalalImpl>(d_pImpl))->
+    setforDiagonal(
+      Point2d(tmp.at(0), tmp.at(1)),
+      Point2d(tmp.at(2), tmp.at(3))
+    );
+}
 AParallelogram & AParallelogram::operator=(const AParallelogram & rhs)
 {
   if (this == &rhs)
@@ -51,6 +50,16 @@ AParallelogram & AParallelogram::operator=(const AParallelogram & rhs)
   return *this;
 }
 
+
+Rect * AParallelogram::boundingBox() const
+{
+  auto curImpl =
+    (boost::dynamic_pointer_cast<PalalImpl>(d_pImpl));
+
+  Rect *rect = new Rect();
+  rect->set(curImpl->getP1(), curImpl->getP2(), curImpl->getP3(), curImpl->getP4());
+  return (rect);
+}
 
 void AParallelogram::DrawObject(IWDraw *w) const
 {
@@ -93,7 +102,7 @@ void AParallelogram::load(IRead *r)
     throw ReadError("Reder not available");
   auto curImpl =
     (boost::dynamic_pointer_cast<PalalImpl>(d_pImpl));
-  curImpl->set(
+  curImpl->setforTops(
     r->rdPoint2(), r->rdPoint2(),
     r->rdPoint2(), r->rdPoint2()
   );
@@ -113,7 +122,7 @@ void AParallelogram::set(const doubleVec& tmp)
   }
 }
 
-//void AParallelogram::set(const Point2d & P1, const Point2d & P2, const Point2d & P3, const Point2d & P4)
-//{
-//  (boost::dynamic_pointer_cast<PalalImpl>(d_pImpl))->set(P1, P2, P3, P4);
-//}
+void AParallelogram::set(const Point2d & P1, const Point2d & P2, const Point2d & P3, const Point2d & P4)
+{
+  (boost::dynamic_pointer_cast<PalalImpl>(d_pImpl))->setforTops(P1, P2, P3, P4);
+}

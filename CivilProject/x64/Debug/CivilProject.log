@@ -1,18 +1,28 @@
 ﻿  AParallelogram.cpp
   Arc.cpp
+  ArcImpl.cpp
+  BaseImpl.cpp
   Circle.cpp
   FindBoundigBox.cpp
-c:\git\civilproject\civilproject\findboundigbox.cpp(28): warning C4267: 'argument': conversion from 'size_t' to 'const _Ty', possible loss of data
-          with
-          [
-              _Ty=int
-          ]
-c:\git\civilproject\civilproject\findboundigbox.cpp(30): warning C4267: 'argument': conversion from 'size_t' to 'const _Ty', possible loss of data
-          with
-          [
-              _Ty=int
-          ]
+  IBaseObject.cpp
+  CivilProject.cpp
+  operation_w_double.cpp
+  PalalImpl.cpp
+  Point2d.cpp
   Polygone.cpp
   Polyline.cpp
+  PolylineImpl.cpp
+  ReadC.cpp
+  ReadF.cpp
+  Rect.cpp
+  Square.cpp
+  WDrawCons.cpp
+  WDrawOGL.cpp
+c:\git\civilproject\civilproject\wdrawogl.cpp(11): warning C4100: 'p2': unreferenced formal parameter
+c:\git\civilproject\civilproject\wdrawogl.cpp(11): warning C4100: 'p1': unreferenced formal parameter
+  Generating Code...
+  Compiling...
+  WriteC.cpp
+  WriteF.cpp
   Generating Code...
   CivilProject.vcxproj -> C:\git\CivilProject\x64\Debug\CivilProject.exe
