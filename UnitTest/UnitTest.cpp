@@ -181,8 +181,6 @@ namespace ImplTest
         }
     };
 
-  public:
-
     TEST_METHOD(TestBaseFunctional)
     {
       try
