@@ -53,19 +53,7 @@ std::shared_ptr<IBaseObject> CreteFindFigure(int type)
 
 int main()
 {
-  Arc *p = new Arc();
-
-  p->set(Point2d(0, 0), 0.5, 0, 180);
-  delete p;
-  std::cout << "Hello World!\n";
-    int  i = 0;
-    //foo();
-    while (true)
-    {
-      if (i == 1000)
-        break;
-      i++;
-    }
+  
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

@@ -147,6 +147,7 @@
     <ClCompile Include="ArcImpl.cpp" />
     <ClCompile Include="BaseImpl.cpp" />
     <ClCompile Include="Circle.cpp" />
+    <ClCompile Include="ErrLogger.cpp" />
     <ClCompile Include="FindBoundigBox.cpp" />
     <ClCompile Include="IBaseObject.cpp" />
     <ClCompile Include="CivilProject.cpp" />
@@ -173,6 +174,7 @@
     <ClInclude Include="Circle.h" />
     <ClInclude Include="Constant_Oda.h" />
     <ClInclude Include="EnumEntityType.h" />
+    <ClInclude Include="ErrLogger.h" />
     <ClInclude Include="FigureFactory.h" />
     <ClInclude Include="FindBoundigBox.h" />
     <ClInclude Include="IBaseObject.h" />

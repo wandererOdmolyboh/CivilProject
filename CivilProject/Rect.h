@@ -1,5 +1,6 @@
 #pragma once
 #include "AParallelogram.h"
+//todo add opertor = and copy after show
 class Rect :
   public AParallelogram
 {

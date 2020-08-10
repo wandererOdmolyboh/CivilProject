@@ -1,2 +1,20 @@
-﻿  CivilProject.cpp
+﻿  AParallelogram.cpp
+  Arc.cpp
+  ArcImpl.cpp
+  BaseImpl.cpp
+  Circle.cpp
+  CivilProject.cpp
+  IBaseObject.cpp
+  PalalImpl.cpp
+  Polygone.cpp
+  Polyline.cpp
+  PolylineImpl.cpp
+  ReadC.cpp
+  ReadF.cpp
+  Rect.cpp
+  Square.cpp
+  WriteC.cpp
+  WriteF.cpp
+  operation_w_double.cpp
+  Generating Code...
   CivilProject.vcxproj -> C:\git\CivilProject\x64\Debug\CivilProject.exe

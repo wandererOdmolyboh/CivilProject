@@ -31,9 +31,6 @@
     <Filter Include="Source Files\Draw">
       <UniqueIdentifier>{81284421-01e9-4c68-a5aa-44cdc0060b01}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\FigureFabric">
-      <UniqueIdentifier>{6f9d6584-8e74-49db-88b3-53a0bc45c782}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\FigureFabric">
       <UniqueIdentifier>{00d2359a-45c1-41e9-9e9f-e80dda79c49a}</UniqueIdentifier>
     </Filter>
@@ -126,6 +123,9 @@
     <ClCompile Include="PalalImpl.cpp">
       <Filter>Source Files\ImplEntity</Filter>
     </ClCompile>
+    <ClCompile Include="ErrLogger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Point2d.h">
@@ -214,6 +214,9 @@
     </ClInclude>
     <ClInclude Include="FindBoundigBox.h">
       <Filter>Header Files\NewFilter1</Filter>
+    </ClInclude>
+    <ClInclude Include="ErrLogger.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

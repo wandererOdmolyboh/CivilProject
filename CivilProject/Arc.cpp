@@ -54,8 +54,8 @@ void Arc::DrawObject(IWDraw *w) const
     throw ErorDataFigure("Figure is not valid cannot draw object");
   std::shared_ptr<ArcImpl> curImpl =
     (boost::dynamic_pointer_cast<ArcImpl>(d_pImpl));
-  double angl1 = curImpl->getAngleFirst();// how to formate data?
-	double angl2 = curImpl->getAngleSecond(); // how to formate data?
+  double angl1 = curImpl->getAngleFirst();
+	double angl2 = curImpl->getAngleSecond();
 	w->drawText(curImpl->getName().c_str());
 	Point2d p1(curImpl->curPointAngle(angl1));
   Point2d p2;

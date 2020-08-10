@@ -14,8 +14,8 @@ public:
   Point2d getP3() const;
   Point2d getP4() const;
 private:
-  Point2d m_P1;
-  Point2d m_P2;
-  Point2d m_P3;
-  Point2d m_P4;
+  Point2d m_Point1;
+  Point2d m_Point2;
+  Point2d m_Point3;
+  Point2d m_Point4;
 };
